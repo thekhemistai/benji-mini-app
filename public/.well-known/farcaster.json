@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "BENJI Survival Game",
+    "homeUrl": "https://benji-game.vercel.app",
+    "iconUrl": "https://benji-game.vercel.app/icon.png",
+    "splashImageUrl": "https://benji-game.vercel.app/splash.png",
+    "splashBackgroundColor": "#1a1a2e",
+    "webhookUrl": "https://benji-game.vercel.app/api/webhook",
+    "subtitle": "Survive the FUD",
+    "description": "Help BENJI survive waves of FUD in this action game. Dodge red candles, avoid whales, collect diamonds!",
+    "screenshotUrls": [
+      "https://benji-game.vercel.app/screenshots/gameplay.png",
+      "https://benji-game.vercel.app/screenshots/gameover.png"
+    ],
+    "primaryCategory": "games",
+    "tags": ["game", "benji", "base", "meme", "arcade"],
+    "heroImageUrl": "https://benji-game.vercel.app/hero.png",
+    "tagline": "Survive the FUD",
+    "ogTitle": "BENJI Survival Game",
+    "ogDescription": "Help BENJI survive! Dodge FUD, avoid whales, collect diamonds.",
+    "ogImageUrl": "https://benji-game.vercel.app/og.png",
+    "noindex": false
+  }
+}
