@@ -61,6 +61,8 @@
 
 **Purpose:** Enable autonomous payments for AGENTPAY testing
 
+**Note:** Bankr wallet already connected for live trading when approved
+
 ---
 
 ## 🟢 Priority 5: Conway Integration Research
@@ -112,6 +114,10 @@
 ---
 
 ## Notes
+
+**Wallet Status:**
+- **Bankr:** ✅ Connected (live trading capability when approved)
+- **awal:** ⏳ Pending authentication (for AGENTPAY testing)
 
 **What we're building:** AGENTPAY ecosystem on Base
 - AGENTLOG: Immutable audit trails (in progress)
