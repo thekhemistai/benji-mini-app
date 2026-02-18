@@ -22,10 +22,13 @@
 
 **Our Position:**
 - **Entry Date:** 2026-02-18
-- **Entry Price:** [Pending - get from your trade history]
-- **Position Size:** [Pending - how much did you buy?]
-- **Current Value:** Tracking
-- **PnL:** TBD
+- **Entry Mcap:** $34,000
+- **Entry Price:** ~$0.0000003 (implied from mcap)
+- **Position Size:** $20 USD
+- **Platform:** Coinbase Base App
+- **Current Mcap:** $34,885
+- **Current Value:** ~$20.52
+- **PnL:** +$0.52 (+2.6%)
 - **Status:** 🟢 HOLD
 
 ## Ecosystem Connections
