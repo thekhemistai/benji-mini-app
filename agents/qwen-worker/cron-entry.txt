@@ -1,0 +1,8 @@
+# Qwen Worker Cron Job
+# Add this to your crontab with: crontab -e
+
+# Run Qwen Worker every 15 minutes
+*/15 * * * * /Users/thekhemist/.openclaw/workspace/agents/qwen-worker/qwen-controller.sh >> /Users/thekhemist/.openclaw/workspace/agents/qwen-worker/logs/cron.log 2>&1
+
+# Alternative: Run manually first to test
+# /Users/thekhemist/.openclaw/workspace/agents/qwen-worker/qwen-controller.sh
