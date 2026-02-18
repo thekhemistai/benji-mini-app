@@ -11,11 +11,11 @@
   - [x] Test `verifyLog()` function  
   - [x] Test `getAgentLogs()` pagination
   - [x] Test `verifyChainIntegrity()`
-- [ ] Run tests locally to verify they pass
-- [ ] Set up Base Sepolia testnet configuration
-- [ ] Create deployment script for Base Sepolia
-- [ ] Deploy AgentLog.sol to Base Sepolia testnet
-- [ ] Verify contract on BaseScan
+- [x] Run tests locally to verify they pass ✅ (17/17 passing, 363ms)
+- [x] Set up Base Sepolia testnet configuration ✅ (already configured in hardhat.config.js)
+- [x] Create deployment script for Base Sepolia ✅ (exists at scripts/deploy.js)
+- [ ] Deploy AgentLog.sol to Base Sepolia testnet ⏳ **BLOCKED: Need .env with PRIVATE_KEY**
+- [ ] Verify contract on BaseScan ⏳ **BLOCKED: Need BASESCAN_API_KEY**
 
 **Files:** `projects/agentlog/contracts/`
 
@@ -23,13 +23,11 @@
 
 ## 🟡 Priority 2: Qwen Worker Activation
 
-**Status:** Ready, needs manual step | **ETA:** 5 minutes
+**Status:** ✅ Installed | **ETA:** Monitoring
 
-- [ ] Install Qwen Worker cron job
-  ```bash
-  crontab -e
-  # Paste: */15 * * * * /Users/thekhemist/.openclaw/workspace/agents/qwen-worker/qwen-controller.sh >> /Users/thekhemist/.openclaw/workspace/agents/qwen-worker/logs/cron.log 2>&1
-  ```
+- [x] Install Qwen Worker cron job ✅
+  - **Job ID:** `32cecb3a-f62d-48c7-927e-2506e0409a94`
+  - **Schedule:** Every 15 minutes via OpenClaw cron
 - [ ] Monitor first 24 hours for errors
 - [ ] Document actual token savings
 
@@ -85,9 +83,10 @@
 
 **Status:** Ready to execute | **ETA:** Ongoing
 
-- [ ] Review 13 X articles on Desktop
+- [x] Review 13 X articles on Desktop ✅
+  - First post ready: "The Qwen Gambit" (LLM cost savings)
 - [ ] Create posting schedule
-- [ ] Set up Buffer or similar for scheduling
+- [ ] Set up Buffer or similar for scheduling ⏳ **BLOCKER: Need X API access or Buffer account**
 - [ ] Post first thread (LLM cost savings article)
 - [ ] Track engagement metrics
 
