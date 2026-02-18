@@ -106,42 +106,44 @@ def get_next_market_window() -> datetime:
     return next_window.replace(second=0, microsecond=0)
 
 def get_polymarket_odds() -> Optional[Dict]:
-    """Fetch Polymarket odds via Bankr CLI with timeout handling."""
+    """Fetch Polymarket odds via Bankr CLI natural language interface."""
     try:
         result = subprocess.run(
-            ["bankr", "polymarket", "markets", "--search", "BTC Price", "--limit", "5"],
+            ["bankr", "what are the odds for bitcoin up or down today"],
             capture_output=True,
             text=True,
-            timeout=30  # 30 second timeout
+            timeout=60  # 60 second timeout for LLM processing
         )
         
         if result.returncode != 0:
             log(f"Bankr error: {result.stderr}", "ERROR")
             return None
         
-        # Parse Bankr output for BTC 5-min market
+        # Parse Bankr output
         output = result.stdout
         
-        # Look for "BTC Price (5m)" or similar
-        if "BTC Price (5m)" in output or "BTC Price Up/Down (5m)" in output:
-            # Extract odds - Bankr output varies, handle flexibly
-            yes_match = re.search(r'Yes[:\s]+(\d+\.?\d*)%', output)
-            no_match = re.search(r'No[:\s]+(\d+\.?\d*)%', output)
-            
-            if yes_match and no_match:
+        # Look for "Up: $X.XXX, Down: $X.XXX" format
+        up_match = re.search(r'Up[:\s]+\$([\d.]+)', output)
+        down_match = re.search(r'Down[:\s]+\$([\d.]+)', output)
+        
+        if up_match and down_match:
+            up_price = float(up_match.group(1))
+            down_price = float(down_match.group(1))
+            total = up_price + down_price
+            if total > 0:
                 return {
-                    "up": float(yes_match.group(1)) / 100,
-                    "down": float(no_match.group(1)) / 100,
+                    "up": up_price / total,
+                    "down": down_price / total,
                     "source": "bankr",
                     "timestamp": datetime.now(timezone.utc).isoformat(),
                 }
         
-        # Fallback: assume 50/50 if market not found
-        log("BTC 5m market not found in Bankr output, using 50/50", "WARN")
+        # Fallback: assume 50/50 if parsing fails
+        log("Could not parse Bankr output, using 50/50", "WARN")
         return {"up": 0.5, "down": 0.5, "source": "fallback", "timestamp": datetime.now(timezone.utc).isoformat()}
         
     except subprocess.TimeoutExpired:
-        log("Bankr timeout (>30s), using cached/fallback odds", "WARN")
+        log("Bankr timeout (>60s), using fallback odds", "WARN")
         return {"up": 0.5, "down": 0.5, "source": "timeout_fallback", "timestamp": datetime.now(timezone.utc).isoformat()}
     except Exception as exc:
         log(f"Failed to fetch Polymarket odds: {exc}", "ERROR")

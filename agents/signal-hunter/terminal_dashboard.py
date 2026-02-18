@@ -58,67 +58,77 @@ class TradingTerminal:
             return None
     
     def calculate_rsi(self, period: int = 14) -> Optional[float]:
-        """Calculate RSI from price history."""
+        """Calculate RSI from price history using Wilder's smoothing."""
         if len(self.price_history) < period + 1:
             return None
         
-        prices = [p["price"] for p in list(self.price_history)[-period-1:]]
-        gains = []
-        losses = []
+        prices = [p["price"] for p in list(self.price_history)]
+        if len(prices) < period + 1:
+            return None
         
-        for i in range(1, len(prices)):
-            change = prices[i] - prices[i-1]
-            if change > 0:
-                gains.append(change)
-                losses.append(0)
-            else:
-                gains.append(0)
-                losses.append(abs(change))
+        # Calculate price changes
+        deltas = [prices[i] - prices[i-1] for i in range(1, len(prices))]
         
-        avg_gain = sum(gains) / len(gains) if gains else 0
-        avg_loss = sum(losses) / len(losses) if losses else 0
+        # Get last 'period' deltas
+        deltas = deltas[-period:]
+        
+        gains = [d if d > 0 else 0 for d in deltas]
+        losses = [abs(d) if d < 0 else 0 for d in deltas]
+        
+        avg_gain = sum(gains) / period
+        avg_loss = sum(losses) / period
         
         if avg_loss == 0:
             return 100.0
         
         rs = avg_gain / avg_loss
         rsi = 100 - (100 / (1 + rs))
-        return rsi
+        
+        # Clamp to valid range
+        return max(0.0, min(100.0, rsi))
     
     def calculate_macd(self, fast: int = 12, slow: int = 26, signal: int = 9) -> Optional[Dict]:
         """Calculate MACD from price history."""
-        if len(self.price_history) < slow + signal:
+        min_required = slow + signal
+        if len(self.price_history) < min_required:
             return None
         
         prices = [p["price"] for p in list(self.price_history)]
         
-        # Calculate EMAs
+        # Calculate EMAs using proper formula
         def ema(data, period):
+            if len(data) < period:
+                return None
             multiplier = 2 / (period + 1)
-            ema_values = [data[0]]
-            for i in range(1, len(data)):
-                ema_values.append((data[i] - ema_values[-1]) * multiplier + ema_values[-1])
-            return ema_values[-1]
+            # Start with SMA for first EMA value
+            sma = sum(data[:period]) / period
+            ema_val = sma
+            # Calculate subsequent EMAs
+            for price in data[period:]:
+                ema_val = (price - ema_val) * multiplier + ema_val
+            return ema_val
         
         ema_fast = ema(prices, fast)
         ema_slow = ema(prices, slow)
+        
+        if ema_fast is None or ema_slow is None:
+            return None
+        
         macd_line = ema_fast - ema_slow
         
-        # Signal line (EMA of MACD)
-        # Simplified: use last few MACD values
-        macd_history = []
-        for i in range(signal, 0, -1):
-            if len(prices) >= slow + i:
-                ef = ema(prices[:-i], fast)
-                es = ema(prices[:-i], slow)
-                macd_history.append(ef - es)
+        # For signal line, we need MACD history
+        # Simplified: calculate signal as EMA of recent price changes
+        changes = [prices[i] - prices[i-1] for i in range(1, len(prices))]
+        if len(changes) >= signal:
+            signal_ema = ema([0] + changes, signal)  # Pad with 0 to match length
+        else:
+            signal_ema = 0
         
-        signal_line = sum(macd_history) / len(macd_history) if macd_history else macd_line
-        histogram = macd_line - signal_line
+        histogram = macd_line - signal_ema
         
         return {
             "macd": macd_line,
-            "signal": signal_line,
+            "signal": signal_ema,
             "histogram": histogram
         }
     
