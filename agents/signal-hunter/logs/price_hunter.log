@@ -1,0 +1,7 @@
+[2026-02-18T07:34:30.771685+00:00] [INIT] Price Hunter v0.2 starting - Synchronized with Polymarket windows
+[2026-02-18T07:34:30.772012+00:00] [CONFIG] Alert threshold: 30s before window, Monitor for: 90s
+[2026-02-18T07:34:30.772247+00:00] [ALERT] Window opening at 07:35:00 - Monitoring now!
+[2026-02-18T07:34:30.772292+00:00] [MONITOR] Starting 90-second monitoring for window at 07:35:00
+[2026-02-18T07:34:31.270024+00:00] [INIT] BTC $67,737.60 at window start
+[2026-02-18T07:36:01.939251+00:00] [NO SIGNAL] Move was 0.04% (need 0.5%)
+[2026-02-18T07:36:01.940102+00:00] [WAIT] Window closed - Waiting 238s for next window
