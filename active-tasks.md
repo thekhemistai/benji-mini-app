@@ -6,11 +6,13 @@
 
 **Status:** In Progress | **ETA:** 2-3 days
 
-- [ ] Write Hardhat tests for AgentLog.sol
-  - Test `createLog()` function
-  - Test `verifyLog()` function  
-  - Test `getAgentLogs()` pagination
-  - Test `verifyChainIntegrity()`
+- [x] Write Hardhat tests for AgentLog.sol ✅
+  - [x] Test `createLog()` function
+  - [x] Test `verifyLog()` function  
+  - [x] Test `getAgentLogs()` pagination
+  - [x] Test `verifyChainIntegrity()`
+- [ ] Run tests locally to verify they pass
+- [ ] Set up Base Sepolia testnet configuration
 - [ ] Create deployment script for Base Sepolia
 - [ ] Deploy AgentLog.sol to Base Sepolia testnet
 - [ ] Verify contract on BaseScan
