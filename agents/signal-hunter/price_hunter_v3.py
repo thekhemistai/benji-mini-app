@@ -161,7 +161,7 @@ def calculate_edge(btc_change: float, direction: str, odds: Dict) -> Tuple[float
     return edge, fair_odds
 
 def log_trade(signal: Dict, odds: Dict, edge: float, fair_odds: float, state: Dict):
-    """Log paper trade."""
+    """Log paper trade to both local storage and official PaperTradingLogger."""
     trade = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "type": "paper_trade",
@@ -179,9 +179,29 @@ def log_trade(signal: Dict, odds: Dict, edge: float, fair_odds: float, state: Di
         "actual_pnl": None,
     }
     
+    # Log to local file
     trades_file = REPORTS_DIR / f"trades_{datetime.now(timezone.utc).strftime('%Y-%m-%d')}.jsonl"
     with trades_file.open("a") as f:
         f.write(json.dumps(trade) + "\n")
+    
+    # Log to official PaperTradingLogger
+    try:
+        sys.path.insert(0, '/Users/thekhemist/.openclaw/workspace/trading/paper-logs')
+        from logger import PaperTradingLogger
+        pt_logger = PaperTradingLogger()
+        pt_logger.log_trade({
+            'market': f"BTC-Price-{signal['direction']}-{(datetime.now(timezone.utc) - timedelta(minutes=4)).strftime('%H%M')}",
+            'direction': signal['direction'],
+            'entry_price': odds.get("up" if signal["direction"] == "UP" else "down", 0.5),
+            'fair_price': fair_odds,
+            'edge_percent': edge * 100,
+            'position_size': CONFIG['VIRTUAL_STAKE'],
+            'confidence': min(abs(edge) * 10, 0.95),  # Scale edge to confidence
+            'reasoning': f"Signal Hunter: BTC moved {signal['change_pct']:.2f}% with {edge*100:.1f}% edge on {signal['direction']}",
+            'status': 'open'
+        })
+    except Exception as e:
+        log(f"Failed to log to PaperTradingLogger: {e}", "WARN")
     
     # Update state
     state["trades_today"] += 1
