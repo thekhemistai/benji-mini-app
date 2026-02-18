@@ -16,8 +16,8 @@ WORKSPACE = Path("/Users/thekhemist/.openclaw/workspace")
 
 # Watchlist - token addresses to monitor
 WATCHLIST = {
-    "BENJI": "0x3c3cabB6c6132F2D3Dbe1A90E3C429b719C56b81",
-    "AIGHT": "0xAf11B23a708bee537C44F3d85C2e0fd93E508b07",
+    "BENJI": "0xBC45647eA894030a4E9801Ec03479739FA2485F0",  # Basenji on Base
+    "AIGHT": "0xAf11B23a708bee537C44F3d85C2e0fd93E508b07",  # AIGHT on Base
 }
 
 def fetch_dexscreener(token_address):
