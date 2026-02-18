@@ -67,15 +67,15 @@
 
 ## 🟢 Priority 5: Conway Integration Research
 
-**Status:** Opportunity, not urgent | **ETA:** TBD
+**Status:** In Progress | **ETA:** 1-2 hours
 
-- [ ] Install Conway Terminal (`npx conway-terminal`)
-- [ ] Fund wallet with small amount for testing
+- [x] Install Conway Terminal (`npx conway-terminal`) ✅ v2.0.9 installed
+- [ ] Fund wallet with small amount for testing ⏳ **Need awal wallet auth first**
 - [ ] Test sandbox creation ($5/month)
 - [ ] Evaluate x402 integration for AGENTPAY
 - [ ] Decide: Partner, compete, or fork Automaton model
 
-**Notes:** Conway validates our thesis. x402 + AGENTPAY = commerce layer.
+**Notes:** Conway validates our thesis. x402 + AGENTPAY = commerce layer. **Dependent on Priority 4 (awal auth)**.
 
 ---
 
