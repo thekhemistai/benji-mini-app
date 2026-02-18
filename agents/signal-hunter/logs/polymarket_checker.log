@@ -1,0 +1,3 @@
+[2026-02-18T07:10:57.349767+00:00] [CHECK] Processing signal: BTC UP 0.80%
+[2026-02-18T07:11:57.361785+00:00] [ERROR] Failed to get Polymarket odds: Command '['bankr', 'market', 'info', 'BTC Price Up/Down (5m)']' timed out after 60 seconds
+[2026-02-18T07:11:57.362876+00:00] [PAPER TRADE] BUY YES (UP) - Edge: 8.0% - Current: 0.50, Fair: 0.58
