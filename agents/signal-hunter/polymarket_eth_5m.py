@@ -63,7 +63,7 @@ def fetch_eth_price() -> Optional[float]:
 def get_polymarket_odds() -> Tuple[Optional[float], Optional[float]]:
     try:
         result = subprocess.run(["bankr", "market", "info", CONFIG["MARKET_NAME"]], 
-                              capture_output=True, text=True, timeout=30)
+                              capture_output=True, text=True, timeout=60)
         if result.returncode != 0:
             return None, None
         

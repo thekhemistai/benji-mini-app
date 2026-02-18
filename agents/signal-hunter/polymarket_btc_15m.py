@@ -84,7 +84,7 @@ def get_polymarket_odds() -> Tuple[Optional[float], Optional[float]]:
             ["bankr", "market", "info", CONFIG["MARKET_NAME"]],
             capture_output=True,
             text=True,
-            timeout=30
+            timeout=60
         )
         if result.returncode != 0:
             log(f"bankr error: {result.stderr}", "ERROR")
