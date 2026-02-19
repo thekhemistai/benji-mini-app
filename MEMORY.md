@@ -14,6 +14,15 @@ Last updated: 2026-02-16
 **Paper trading competency** → 20 trades executed, 19 open, proving framework before $KHEM launch
 → See memory/trading/paper-portfolio.md for live positions
 
+## New Additions (Feb 18 2026)
+- **Memory Palace** – searchable, tagged knowledge base (folder `memory/palace/`).
+- **Lab Dashboard** – visual task board (`launch‑lab.sh`).
+- **Paper‑Trading Logger** – win/loss & P&L tracking (`trading/paper‑logs/logger.py`).
+- **Conway Tracker** – $20 position logger & watchlist.
+
+All files committed to the repository and backed up.
+
+
 **Secondary**: X following growth through valuable trading content (strategy ready, awaiting platform access)
 
 **Tertiary**: Base Chain Volume Oracle MVP (scoped, ready for Phase 1 when resources available)

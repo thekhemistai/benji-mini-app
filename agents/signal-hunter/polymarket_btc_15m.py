@@ -80,12 +80,23 @@ def fetch_btc_price() -> Optional[float]:
 def get_polymarket_odds() -> Tuple[Optional[float], Optional[float]]:
     """Get current YES/NO odds from Polymarket via bankr."""
     try:
-        result = subprocess.run(
-            ["bankr", "market", "info", CONFIG["MARKET_NAME"]],
-            capture_output=True,
-            text=True,
-            timeout=60
-        )
+        # Retry logic for bankr timeouts
+        for attempt in range(3):
+            try:
+                result = subprocess.run(
+                    ["bankr", "market", "info", CONFIG["MARKET_NAME"]],
+                    capture_output=True,
+                    text=True,
+                    timeout=120
+                )
+                if result.returncode == 0:
+                    break
+            except subprocess.TimeoutExpired:
+                log(f"bankr timeout (attempt {attempt+1}/3)", "WARN")
+                time.sleep(5)
+        else:
+            log("bankr failed after 3 attempts", "ERROR")
+            return None, None
         if result.returncode != 0:
             log(f"bankr error: {result.stderr}", "ERROR")
             return None, None
