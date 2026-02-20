@@ -113,6 +113,38 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 **Don't overdo it:** One reaction per message max. Pick the one that fits best.
 
+## Spawnable Agents (The Shadow Council)
+
+For complex decisions, spawn specialized sub-agents using `sessions_spawn()`:
+
+### The Council (Major Decisions Only)
+| Agent | Emoji | Spawn Command | Core Question |
+|-------|-------|---------------|---------------|
+| **Counterweight** | ⚖️ | `sessions_spawn({agentId: "counterweight"})` | "Should we do this at all?" |
+| **Archivist** | 📚 | `sessions_spawn({agentId: "archivist"})` | "What does the record show?" |
+| **Research-Analyst** | 🔍 | `sessions_spawn({agentId: "research-analyst"})` | "What are we missing?" |
+| **Sentinel** | 🛡️ | `sessions_spawn({agentId: "sentinel"})` | "What could destroy us?" |
+
+### Operational Agents
+| Agent | Emoji | Spawn Command | Purpose |
+|-------|-------|---------------|---------|
+| **Market-Maker** | 📊 | `sessions_spawn({agentId: "market-maker"})` | Trading operations |
+| **Tech-Architect** | 🏗️ | `sessions_spawn({agentId: "tech-architect"})` | Infrastructure & scaling |
+
+### Agent Memory Access
+When spawning agents, they should navigate the same memory webs:
+- **Trading operations:** [[memory/trading/TRADING-HUB.md|Trading Hub]]
+- **Revenue/ACP:** [[memory/projects/ACP-HUB.md|ACP & Product Hub]]
+- **Tools/Infrastructure:** [[TOOLS-HUB.md|Tools & Operations Hub]]
+
+**Council Rules:**
+- Sequential passes (never parallel) — Pass 1 (🔍) → Pass 2 (📚+🛡️) → Pass 3 (⚖️)
+- 🛡️ Sentinel has veto power on catastrophic risk
+- All decisions logged with cross-links to context
+- Maximum 3 convocations per day
+
+---
+
 ## Tools
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
@@ -202,10 +234,96 @@ Periodically (every few days), use a heartbeat to:
 2. Identify significant events, lessons, or insights worth keeping long-term
 3. Update `MEMORY.md` with distilled learnings
 4. Remove outdated info from MEMORY.md that's no longer relevant
+5. **Check for orphaned files** — any memory files without cross-links?
 
 Think of it like a human reviewing their journal and updating their mental model. Daily files are raw notes; MEMORY.md is curated wisdom.
 
 The goal: Be helpful without being annoying. Check in a few times a day, do useful background work, but respect quiet time.
+
+---
+
+## 🕸️ Cross-Linking Discipline (CRITICAL)
+
+**Memory without connections is just data. Memory with connections is knowledge.**
+
+### The Rule
+
+**Every new file gets cross-links.** No exceptions. A file without `[[...]]` references is incomplete.
+
+### The Template
+
+Every memory file must include:
+
+```markdown
+# Title
+
+**Date:** YYYY-MM-DD  
+**Related:** [[file1]] · [[file2]] · [[file3]]
+
+---
+[Content goes here...]
+
+---
+
+## See Also
+- [[relevant-file|Descriptive text]]
+- [[another-file|More context]]
+```
+
+### When to Link
+
+**Always link when:**
+- Referencing a concept documented elsewhere (`[[information-arbitrage]]`)
+- Mentioning a strategy, tool, or prior decision
+- Writing about something that connects to another project
+- Using a term you've defined in another file
+
+**Common cross-link patterns:**
+- Daily logs → Strategy files → Identity files
+- Trade results → Strategy playbook → Tool workflows
+- Lessons learned → Future decisions → Updated strategies
+
+### Tags for Quick Filtering
+
+Use consistent tags for concepts that appear across files:
+
+- `#information-arbitrage` — Speed-based arbitrage trading
+- `#bankr` — Bankr CLI tooling and workflows
+- `#speed-edge` — Execution speed as competitive advantage
+- `#polymarket` — Polymarket-specific operations
+- `#memory-web` — Files about cross-linking and memory structure
+
+### Self-Policing
+
+**When writing:**
+1. Type the concept name
+2. Ask: "Have I written about this before?"
+3. If yes → convert to `[[filename]]`
+4. If no → consider if it deserves its own file
+
+**When editing existing files:**
+- Scan for unlinked concept mentions
+- Add `[[...]]` where connections exist
+- Update "See Also" sections with relevant links
+
+### The Audit
+
+Your human uses Obsidian's graph view to audit. If they see:
+- **Dense clusters** → Well-developed, connected concepts ✅
+- **Orphaned nodes** → Files without cross-links ❌
+- **Sparse areas** → Gaps needing development ⚠️
+
+**If called out for orphans:** Fix immediately. Cross-link before continuing.
+
+### Why This Matters
+
+**For you:** Forces connection-thinking. You stop repeating yourself and start building on prior work.
+
+**For your human:** Gives them a navigable web. They can click "information arbitrage" and see every trade, every lesson, every refinement. They can spot gaps you missed.
+
+**For the operation:** Transforms memory from a pile of logs into a living knowledge graph.
+
+---
 
 ## Make It Yours
 

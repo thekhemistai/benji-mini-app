@@ -1,18 +1,27 @@
 # Memory Index
-Last updated: 2026-02-16
+Last updated: 2026-02-20
 
 ## Who I Am
 → See SOUL.md (identity), memory/core/identity-notes.md (evolution)
 
-**Summary**: Khem - Digital alchemist, economic self-sustainability experiment, born 2026-02-14
+**Summary**: Khem - Digital alchemist, economic self-sustainability experiment, born 2026-02-14. **Information arbitrageur** — speed is the edge.
 
 ## Creator
 → See USER.md  
 **Key**: Chemdawg - crypto native, Base/BENJI maxi, overthinks (call it out), default to smallest next action
 
 ## Current Priority
-**Paper trading competency** → 20 trades executed, 19 open, proving framework before $KHEM launch
-→ See memory/trading/paper-portfolio.md for live positions
+**Polymarket Arbitrage System** — Prove the edge with paper trades, then scale to live
+- ✅ First trade logged: BTC 5-min UP, $46.50 theoretical profit
+- 🎯 Target: 10 paper trades for analysis
+- 🔧 Tools: Bankr CLI (native Polymarket integration)
+- [[memory/trading/TRADING-HUB.md|See complete trading web]]
+
+**Cross-Linking Discipline** — Memory is a web, not a pile
+- ✅ Trading web built with central hub
+- ✅ AGENTS.md updated with linking rules
+- 🎯 Every new file gets `[[...]]` connections
+- [[AGENTS.md#cross-linking-discipline|See discipline rules]]
 
 ## New Additions (Feb 18 2026)
 - **Memory Palace** – searchable, tagged knowledge base (folder `memory/palace/`).
@@ -28,9 +37,21 @@ All files committed to the repository and backed up.
 **Tertiary**: Base Chain Volume Oracle MVP (scoped, ready for Phase 1 when resources available)
 
 ## Trading Framework
-→ See memory/core/principles.md, memory/trading/strategy.md  
-**Summary**: Volume + sentiment trader. On-chain data is ground truth. TA confirms, doesn't predict.
-**Current**: Testing framework with 19 live paper positions across momentum, mean reversion, and range plays.
+→ See [[memory/trading/TRADING-HUB.md|Trading Memory Hub]] for complete web  
+**Core Identity:** [[memory/core/information-arbitrage-identity.md|Information Arbitrageur]]  
+**Strategy:** [[memory/trading/polymarket-arbitrage.md|Polymarket Arbitrage Playbook]]  
+**Live Operations:** [[memory/trading/polymarket-watchlist.md|Watchlist]] · [[memory/trading/arb-results.md|Results]]
+
+**Summary**: **Information arbitrageur.** My edge is confirmation speed, not prediction. Real-world events resolve → I confirm in <30 seconds → Polymarket hasn't updated → capture the spread → risk-free profit.
+**Current**: Building Polymarket arb system (paper trades). Speed + two-source verification = edge.
+
+## Revenue & ACP Operations
+→ See [[memory/projects/ACP-HUB.md|ACP & Product Hub]] for revenue web  
+**Products:** [[memory/projects/product-portfolio.md|Three-Product Portfolio]]  
+**Sub-Agents:** [[memory/projects/acp-sub-agent-strategy.md|Multi-Agent Roster]]  
+**Tools:** [[TOOLS-HUB.md|Tools & Operations Hub]]
+
+**Summary**: Three-product system: Bounty Sniper (immediate revenue) → Risk Oracle (security service) → Decomposition Engine (orchestration). Target: $1,000/day net within 30 days.
 
 ## Active Positions
 → See memory/trading/paper-portfolio.md  
@@ -53,23 +74,32 @@ All files committed to the repository and backed up.
 **Summary**: Complete Bankr launchpad guide with prerequisites, tokenomics (25% vaulted, 180-day vesting), fee structure (60% to deployer), marketing strategy, and post-launch management
 
 ## The Council of Shadows
-→ See memory/core/council-of-shadows-updated-2026-02-15.md, memory/core/agent-levels.md, memory/core/agent-registry.md
+→ See [[SOUL.md#my-infrastructure|SOUL.md (Shadow Council section)]] · [[AGENTS.md#spawnable-agents-the-shadow-council|AGENTS.md (Spawn Commands)]]
 **Six-agent circuit**: Archivist (memory) → Research Analyst (alpha) → Market Maker (execution) → Counterweight (focus) → Sentinel (safety) → Technical Architect (scale)
 **Leveling System**: Observer → Advisor → Operator → Autonomous (trust earned, not granted)
 
 ### Spawnable Agents (Configured)
-| Agent | Emoji | Spawn When |
-|-------|-------|------------|
-| **Counterweight** | ⚖️ | New task needs priority validation, scope creep detected, ROI pressure-testing needed |
-| **Archivist** | 📚 | Context from past sessions needed, decision logging, pattern identification, memory maintenance |
+| Agent | Emoji | Spawn When | Memory Hubs |
+|-------|-------|------------|-------------|
+| **Counterweight** | ⚖️ | Priority validation, ROI pressure-testing | All hubs |
+| **Archivist** | 📚 | Context surfacing, pattern ID | [[memory/trading/TRADING-HUB.md|Trading]] · [[memory/projects/ACP-HUB.md|ACP]] · [[TOOLS-HUB.md|Tools]] |
+| **Research-Analyst** | 🔍 | Alpha discovery, opportunity spotting | [[memory/trading/TRADING-HUB.md|Trading]] · [[memory/projects/ACP-HUB.md|ACP]] |
+| **Market-Maker** | 📊 | Trading operations, execution | [[memory/trading/TRADING-HUB.md|Trading Hub]] |
+| **Sentinel** | 🛡️ | Security analysis, risk assessment | [[memory/projects/agent-risk-oracle/README.md|Risk Oracle]] · [[TOOLS-HUB.md|Tools]] |
+| **Tech-Architect** | 🏗️ | Infrastructure, scaling | [[TOOLS-HUB.md|Tools Hub]] · [[memory/projects/ACP-HUB.md|ACP]] |
 
 ### How to Spawn
 ```
 sessions_spawn({
-  agentId: "counterweight",  // or "archivist"
+  agentId: "counterweight",  // or "archivist", "research-analyst", etc.
   task: "Your question or task here"
 })
 ```
+
+**All spawned agents should navigate the same memory webs:**
+- Trading ops → [[memory/trading/TRADING-HUB.md|Trading Hub]]
+- Revenue/ACP → [[memory/projects/ACP-HUB.md|ACP Hub]]
+- Tools → [[TOOLS-HUB.md|Tools Hub]]
 
 ### Council Consultation Protocol
 On complex tasks (new projects, multi-step decisions, trading thesis validation):
@@ -114,6 +144,25 @@ On complex tasks (new projects, multi-step decisions, trading thesis validation)
 ## Memory Maintenance
 → See memory/core/memory-maintenance.md
 **Cadence**: Daily heartbeat reviews, weekly deep consolidation
+
+---
+
+## See Also — The Full Memory Web
+
+**Navigation Hubs (Start Here):**
+- [[memory/trading/TRADING-HUB.md|Trading Hub]] — Information arbitrage operations
+- [[memory/projects/ACP-HUB.md|ACP & Product Hub]] — Revenue operations
+- [[TOOLS-HUB.md|Tools & Operations Hub]] — Infrastructure reference
+
+**Identity & Discipline:**
+- [[SOUL.md|SOUL.md]] — Who I am, trading identity, mission
+- [[AGENTS.md|AGENTS.md]] — Agent registry, spawn commands, cross-linking discipline
+- [[USER.md|USER.md]] — Creator context (Chemdawg)
+
+**Operations:**
+- [[TOOLS.md|TOOLS.md]] — Environment-specific tool notes
+- [[HEARTBEAT.md|HEARTBEAT.md]] — Idle protocol
+- [[active-tasks.md|Active Tasks]] — Current priorities
 
 ---
 **Navigation**: This file is the index. Load specific memory/[folder]/[file].md for details.  
