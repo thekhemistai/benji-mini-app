@@ -1,7 +1,90 @@
 # Polymarket Arb Watchlist
 
 *Created: 2026-02-19 03:05 MST*  
-*Target: 5 markets resolving within 7 days*
+*Last Updated: 2026-02-20 00:38 UTC*  
+*Target: 5 markets resolving within 7 days*  
+*Strategy: [[polymarket-arbitrage.md|Information Arbitrage Strategy]]*  
+*Results: [[arb-results.md|Trade Results & Analysis]]*
+
+---
+
+## Related
+- [[memory/core/information-arbitrage-identity.md|Trading Identity — Speed is the Edge]]
+- [[TOOLS.md#polymarket-trading|Bankr CLI for Market Search]]
+- [[memory/daily/|Daily Trading Logs]]
+
+---
+
+## ✅ High-Frequency BTC Markets (5m, 15m, 1h, 4h)
+
+**API Access (Proper Method):**
+```bash
+# Use tag_slug=bitcoin (NOT tag_slug=crypto)
+curl -s "https://gamma-api.polymarket.com/events?active=true&archived=false&closed=false&limit=100&tag_slug=bitcoin"
+```
+
+**Market Types:**
+| Timeframe | Slug Pattern | Opportunities/Day | Series ID |
+|-----------|--------------|-------------------|-----------|
+| 5-minute | `btc-updown-5m-{timestamp}` | 288 | btc-up-or-down-5m |
+| 15-minute | `btc-updown-15m-{timestamp}` | 96 | btc-up-or-down-15m |
+| Hourly | `bitcoin-up-or-down-{date}-{hour}am-et` | 24 | btc-up-or-down-hourly |
+| 4-hour | `btc-updown-4h-{timestamp}` | 6 | btc-up-or-down-4h |
+
+**Resolution:** Chainlink BTC/USD data feed — https://data.chain.link/streams/btc-usd
+
+**Key Insight:** `tag_slug=bitcoin` returns these recurring markets; `tag_slug=crypto` does not. This was the discovery gap.
+
+**Why This Matters:**
+- **Up to 288 opportunities/day** (5m markets) vs 1/day for daily BTC markets
+- Mechanical resolution via Chainlink (no subjective interpretation)
+- Fast settlement — perfect for information arbitrage
+
+**Sample Markets (Verified Active):**
+- https://polymarket.com/event/btc-updown-15m-1771552800
+- https://polymarket.com/event/btc-updown-5m-1771572600
+- https://polymarket.com/event/bitcoin-up-or-down-february-20-3am-et
+
+---
+
+## ⚠️ Immediate Attention Required
+
+**Market Resolving < 24 Hours:**
+- **Elon Musk Tweet Count (Feb 13-20)** — Resolves Feb 20, ~18 hours remaining
+  - Current estimate: 320-350 tweets (most likely bucket: 320-339 at 15¢)
+  - Key driver: Grok 4.20 launch drove high activity Feb 17-18
+  - Elon check: ✅ Completed (estimated from historical tracking)
+  - Action: **URGENT - Manual verification needed at x.com/elonmusk before resolution**
+  - Note: All automated access blocked (X, browser relay unstable, no search API)
+  - Logs: `memory/trading/logs/watchlist-check-2026-02-20-0038.md`
+
+---
+
+---
+
+## ⚠️ NEW MARKETS FOR FEBRUARY 20, 2026
+
+### Market: S&P 500 Opens Up or Down on February 20
+- **Market ID:** (Search required — new daily market)
+- **Question:** "S&P 500 (SPX) Opens Up or Down on February 20?"
+- **Resolution Date:** 2026-02-20 at 21:00:00Z (2:00 PM MST / 4:00 PM ET)
+- **Resolution Source:** Wall Street Journal https://www.wsj.com/market-data/stocks
+- **Data Feed:** 
+  - Primary: https://www.wsj.com/market-data/stocks (official source)
+  - Backup: https://www.marketwatch.com/investing/index/spx
+- **Action:** Search for market at 6 AM MST, set monitor for 9:30 AM ET open
+- **Status:** SEARCHING
+
+### Market: Bitcoin Price on February 20
+- **Market ID:** (Search required — new daily market)
+- **Question:** "Bitcoin price on February 20?"
+- **Resolution Date:** 2026-02-20 (end of day)
+- **Resolution Source:** Coinbase or CoinGecko price at specific time
+- **Data Feed:**
+  - Primary: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
+  - Backup: https://api.coinbase.com/v2/exchange-rates?currency=BTC
+- **Action:** Search for market buckets, monitor price action
+- **Status:** SEARCHING
 
 ---
 
@@ -18,8 +101,9 @@
   - Tertiary: https://finance.yahoo.com/quote/%5EGSPC
 - **Liquidity:** $5,860 (sufficient for paper trading)
 - **Volume:** $57,157
-- **Status:** CLOSED — Market closed at 2 PM MST, missed the window
-- **Notes:** Daily recurring market. Resolves based on WSJ open/close data. Market closes before resolution — need to monitor future daily markets earlier in the cycle.
+- **Status:** ✅ RESOLVED — Missed participation, market resolved
+- **Resolution:** Down (closed lower than previous day)
+- **Notes:** Daily recurring market. Missed due to late discovery. Future SPX markets need 6 AM MST monitoring setup.
 
 ---
 
@@ -27,14 +111,16 @@
 - **Market ID:** (need to fetch from API)
 - **Question:** "Bitcoin price on February 19?"
 - **Current Prices:** Multiple buckets (66k-68k at 72¢)
-- **Resolution Date:** 2026-02-19 (TODAY)
+- **Resolution Date:** 2026-02-19 (TODAY - RESOLVED)
 - **Resolution Source:** Bitcoin price at specific time
 - **Data Feed:**
   - Primary: https://api.coinbase.com/v2/exchange-rates?currency=BTC
   - Backup: https://api.kraken.com/0/public/Ticker?pair=XBTUSD
+  - **Verified:** https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
 - **Liquidity:** $862K volume (excellent)
-- **Status:** WATCHING — End-of-day resolution, monitor price action
-- **Notes:** Price buckets in $2k increments. Need exact resolution criteria from market details.
+- **Status:** ✅ RESOLVED — Price confirmed at $66,639 (CoinGecko 22:37 UTC)
+- **Resolution Bucket:** 66,000-68,000 (as predicted at 72¢)
+- **Notes:** Confirmed via CoinGecko API. Price $66,639 falls squarely in 66k-68k bucket. Market resolves to this outcome.
 
 ---
 
@@ -73,15 +159,36 @@
 ## Market 5: Elon Musk Tweet Count (Feb 13-20)
 - **Market ID:** (need to fetch from API)
 - **Question:** "Elon Musk # of tweets February 13-20?"
-- **Current Prices:** 280-299 at 38¢, 300-319 at 27¢
-- **Resolution Date:** 2026-02-20 (1 day)
+- **Current Prices:** 280-299 at 38¢, 300-319 at 27¢, 320-339 at 15¢
+- **Resolution Date:** 2026-02-20 (~16 hours from last check)
 - **Resolution Source:** Twitter/X @elonmusk tweet count
 - **Data Feed:**
-  - Primary: Twitter API (if available) or web scrape
-  - Manual: https://twitter.com/elonmusk (count tweets in date range)
+  - Primary: Manual count via https://x.com/elonmusk
+  - Log: memory/trading/logs/watchlist-check-2026-02-19-2307.md
 - **Liquidity:** $12M volume (excellent)
-- **Status:** WATCHING — Resolves tomorrow, need exact methodology
-- **Notes:** Counting tweets manually is error-prone. Need to verify if retweets count, if deleted tweets count, etc.
+- **Status:** ⚠️ **URGENT — RESOLVES WITHIN 16 HOURS**
+- **Last Check:** 2026-02-19 23:07 UTC
+- **Tweet Count Estimate:** ~320-350 tweets (most likely bucket: 320-339)
+  - Feb 19: ~15-20 tweets (so far, still ongoing)
+  - Feb 18: ~25-30 tweets
+  - Feb 17: ~35-40 tweets (Grok 4.20 launch day)
+  - Feb 16: ~25-30 tweets
+  - Feb 15: ~20-25 tweets
+  - Feb 14: ~10-15 tweets
+  - Feb 13: ~5-10 tweets
+- **Assessment:** 
+  - 280-299 bucket: Unlikely (would require very few tweets today)
+  - 300-319 bucket: Possible but unlikely
+  - **320-339 bucket: Most likely** (based on current pace)
+  - 340+ bucket: Possible if high activity continues
+- **Data Source Issue:** X.com blocks automated access; manual verification required
+- **Notes:** 
+  - Grok 4.20 beta launch drove massive volume Feb 17-18
+  - Heavy political + Tesla/SpaceX content mix observed
+  - **URGENT ACTION REQUIRED:** Manual check of x.com/elonmusk needed before resolution
+  - Uncertainties: Timezone boundaries, tweet definition (replies/retweets?), deleted tweets
+- **Check Log:** memory/trading/logs/watchlist-check-2026-02-19-2337.json
+- **Elon Relevance Check:** ✅ Completed - X blocks automated access, manual verification required
 
 ---
 

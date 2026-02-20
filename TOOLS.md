@@ -1,5 +1,9 @@
 # TOOLS.md - Local Notes
 
+**Hub:** [[TOOLS-HUB.md|Tools & Operations Hub]] — Complete infrastructure reference  
+**Trading Tools:** [[memory/trading/TRADING-HUB.md|Trading Hub]] — Market operations  
+**ACP Tools:** [[memory/projects/ACP-HUB.md|ACP & Product Hub]] — Revenue operations
+
 Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
 
 ## What Goes Here
@@ -39,14 +43,85 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ## Crypto Price Checking
 
-**Primary:** DexScreener (dexscreener.com) — Use browser to navigate directly to token pages
+**Primary:** Bankr CLI — `npx bankr "price of BTC"` or `npx bankr "ETH chart"`
+- Live prices, charts, portfolio tracking
+- One command, no browser needed
+- USE THIS FIRST
+
+**Secondary:** DexScreener (dexscreener.com) — Use browser for token deep-dives
 - Format: `https://dexscreener.com/base/{token-address}`
-- Example: `https://dexscreener.com/base/0xBC45647eA894030a4E9801Ec03479739FA2485F0`
 - Shows: Price, volume, % change (5M/1H/6H/24H), liquidity, market cap, buy/sell flow
 
-**Secondary:** Bankr (if available via Bankr integration) — For live chart data
+**Remember:** Don't jump to on-chain SQL queries for basic price checks. Bankr and DexScreener have all the data. Use CDP SQL API only when you need deep on-chain analysis (wallet flows, transfer tracing, etc.).
 
-**Remember:** Don't jump to on-chain SQL queries for basic price checks. DexScreener has all the data and is free. Use CDP SQL API only when you need deep on-chain analysis (wallet flows, transfer tracing, etc.).
+---
+
+## Polymarket Trading
+
+**PRIMARY TOOL: Bankr CLI**
+
+Stop using Gamma API manually. Bankr has native Polymarket integration:
+
+```bash
+# Search markets
+npx bankr "search for bitcoin markets"
+npx bankr "search for trump markets"
+
+# Get market data (prices, odds, volume)
+npx bankr "what are the odds BTC goes up?"
+
+# Check positions
+npx bankr "show my Polymarket positions"
+
+# Place trades (requires approval)
+npx bankr "bet $5 on BTC up"
+npx bankr "buy 100 YES shares"
+
+# Redeem winners
+npx bankr "redeem my winning polymarket positions"
+```
+
+**Why Bankr > Manual API:**
+- Live Polymarket charts integrated
+- Real-time price data
+- Direct trading capability
+- Position tracking
+- No web scraping needed
+
+**When to use Gamma API:** Only when Bankr doesn't expose specific data (rare).
+
+---
+
+### Short-Term BTC Markets (High-Frequency Arb)
+
+**PROPER API ACCESS:** Use Gamma API with `tag_slug=bitcoin` (NOT `tag_slug=crypto`):
+
+```bash
+# Get ALL Bitcoin up/down markets (5m, 15m, 1h, 4h)
+curl -s "https://gamma-api.polymarket.com/events?active=true&archived=false&closed=false&limit=100&tag_slug=bitcoin" | grep -o '"slug":"[^"]*updown[^"]*"' | head -20
+
+# Filter for specific timeframes:
+# 5-minute:  "btc-updown-5m-{timestamp}"   (288/day)
+# 15-minute: "btc-updown-15m-{timestamp}"  (96/day)
+# Hourly:    "bitcoin-up-or-down-{date}"    (24/day)
+# 4-hour:    "btc-updown-4h-{timestamp}"   (6/day)
+```
+
+**Key Discovery:** The `tag_slug=bitcoin` parameter returns short-term BTC markets that `tag_slug=crypto` misses. Crypto tag returns general crypto events; Bitcoin tag returns these specific recurring up/down markets.
+
+**Resolution Source:** All use Chainlink BTC/USD data feed — https://data.chain.link/streams/btc-usd
+
+**URL Pattern (fallback):** `https://polymarket.com/event/btc-updown-{timeframe}-{timestamp}`
+
+**Discovery Script:**
+```bash
+./scripts/discover-btc-markets.sh [hours_ahead]
+```
+
+**Active Market Example:**
+- https://polymarket.com/event/btc-updown-15m-1771552800
+- Resolves: "Up" if end price >= start price, "Down" otherwise
+- See [[memory/trading/polymarket-watchlist.md|Watchlist]] for full details
 
 ---
 
@@ -122,6 +197,24 @@ Use `sessions_spawn()` with appropriate `agentId` and task description.
 **Heartbeats** — Idle protocol
 - When no active tasks: Ask "What moves the mission?"
 - Log action + reasoning in daily file
+
+---
+
+## See Also
+
+**Complete Infrastructure:**
+- [[TOOLS-HUB.md|Tools & Operations Hub]] — Master reference for all capabilities
+- [[memory/trading/TRADING-HUB.md|Trading Hub]] — Market-specific tools
+- [[memory/projects/ACP-HUB.md|ACP Hub]] — Revenue operations tools
+
+**Identity & Memory:**
+- [[SOUL.md|SOUL.md]] — Who I am, how I operate
+- [[AGENTS.md|AGENTS.md]] — Agent registry, spawn commands, cross-linking discipline
+- [[MEMORY.md|MEMORY.md]] — Curated long-term memory
+
+**Daily Operations:**
+- [[HEARTBEAT.md|HEARTBEAT.md]] — Idle protocol, periodic checks
+- [[active-tasks.md|Active Tasks]] — Current priorities
 
 ---
 

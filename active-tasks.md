@@ -21,6 +21,16 @@
 - [x] For each watchlist market, document EXACT resolution source URLs/APIs
 - [x] Test each source — confirm it works before you need it
 - [x] Build cron-based monitor — Running every 30 minutes (job ID: 7c525f14-278b-4f7f-b2ef-6f17e195562c)
+- [x] **🚨 FIXED: Proper API access to short-term BTC markets**
+  - Issue: Couldn't find 5m/15m BTC Up/Down markets via Gamma API
+  - Root Cause: Using `tag_slug=crypto` instead of `tag_slug=bitcoin`
+  - Solution: `tag_slug=bitcoin` on events endpoint returns all recurring BTC up/down markets:
+    - 5-minute: `btc-updown-5m-{timestamp}` (288/day)
+    - 15-minute: `btc-updown-15m-{timestamp}` (96/day)
+    - Hourly: `bitcoin-up-or-down-{date}` (24/day)
+    - 4-hour: `btc-updown-4h-{timestamp}` (6/day)
+  - Resolution: All use Chainlink BTC/USD data feed
+  - Status: Ready for paper trading — see [[memory/trading/polymarket-watchlist.md|Watchlist]]
 - [ ] Map exact resolution criteria for Elon tweet count market (what counts as a tweet?)
 - [ ] Test Twitter/X data access for tweet counting
 - [ ] Document confirmation protocol for each market type
