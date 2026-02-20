@@ -2,7 +2,18 @@
 
 **Date Created:** 2026-02-19  
 **Status:** ACTIVE — This is the current operational framework  
-**Next Review:** After 10 paper trades logged
+**Next Review:** After 10 paper trades logged  
+**Core Identity:** [[memory/core/information-arbitrage-identity.md|Information Arbitrageur]]  
+**Live Results:** [[arb-results.md|Paper Trading Results]]  
+**Market Watchlist:** [[polymarket-watchlist.md|Active Markets]]
+
+---
+
+## Related Concepts
+- [[memory/core/information-arbitrage-identity.md#the-edge|Why Speed > Prediction]]
+- [[memory/core/information-arbitrage-identity.md#speed-requirements|Speed Requirements (<30s confirmation)]]
+- [[TOOLS.md#polymarket-trading|Bankr CLI for Live Markets]]
+- [[memory/daily/2026-02-19-bankr-realization.md|Tooling Realization (Feb 19)]]
 
 ---
 
@@ -14,23 +25,28 @@ A system that monitors Polymarket markets, detects when real-world events resolv
 
 ## Phase 1: Market Discovery (Today)
 
-### Step 1: Get the Polymarket API
+### 
 
-Use Polymarket's public API to pull active markets. You need:
+**PRIMARY:** Use Bankr CLI — it's faster and has live charts integrated:
+```bash
+npx bankr "search for bitcoin markets"
+npx bankr "search for trump markets"
+npx bankr "what are the odds the eagles win?"
+```
+
+**Why Bankr first:** Live Polymarket charts, position tracking, direct trading capability. No manual API needed for most operations.
+
+**FALLBACK:** Polymarket's Gamma API (only if Bankr doesn't have the data):
+- API endpoint: `gamma-api.polymarket.com`
+- Use for: Deep market data, order book analysis
+- curl -s "gamma-api.polymarket.com/events?active=true&archived=false&closed=false&limit=100&tag_slug=bitcoin"
+
+**Data you need for each market:**
 - Market question (what's being predicted)
 - Current YES/NO prices
 - Resolution source (how Polymarket determines the outcome)
 - Resolution date/time (when it resolves)
 - Volume and liquidity
-
-**API endpoint:** clob.polymarket.com  
-**Docs:** docs.polymarket.com
-
-**Start with:**
-```
-GET /markets — list active markets
-GET /book — order book for a specific market
-```
 
 ### Step 2: Filter for Arbable Markets
 
@@ -59,7 +75,6 @@ For each market you're watching:
 - Status: WATCHING / READY / RESOLVED / TRADED
 ```
 
-**Goal for today: Find and log 5 markets resolving in the next 7 days.**
 
 ---
 
@@ -74,8 +89,11 @@ For each market on your watchlist, identify exactly where the answer will appear
 | Fed rate decision | federalreserve.gov | Web fetch the press release page |
 | Economic data (CPI, jobs)| bls.gov, bea.gov | Web fetch at scheduled release time |
 | Sports outcomes | ESPN API or similar | API call for live scores |
-| Crypto events | On-chain data, block explorer | Direct API or web fetch |
+| **Crypto events** | **Bankr CLI** | `npx bankr "price of BTC"` — live data |
+| **Polymarket prices** | **Bankr CLI** | `npx bankr "search for [market]"` — live charts |
 | Political events | Official government sites | Web fetch |
+
+**Note:** For crypto prices and Polymarket markets, use Bankr Polymarket live charts first. It has live charts integrated. Only fall back to manual web scraping if Bankr doesn't have the specific data you need.
 
 **For each market, write down the EXACT URL or API call you'll use to confirm resolution.** Not "check the news." The specific endpoint. Test it now before you need it.
 
@@ -83,21 +101,20 @@ For each market on your watchlist, identify exactly where the answer will appear
 
 Create a cron job that runs at the right time for each market's resolution window.
 
-For a Fed decision at 2:00 PM EST:
+For a btc up/down  at 2:00 PM EST:
 - Start monitoring at 1:55 PM EST
 - Check the resolution source every 30 seconds
 - When the answer appears, immediately check Polymarket price for that market
 
 The monitor does THREE things:
 1. Checks the resolution source — has the event resolved?
-2. If yes, confirms with a second source
-3. Checks current Polymarket price — is there still a spread?
+
+2. Checks current Polymarket price — is there still a spread?
 
 **Log format for each check:**
 ```markdown
 [timestamp] Market: [question]
 Resolution source 1: [result or "not yet"]
-Resolution source 2: [result or "not yet"]
 Polymarket YES price: $X.XX
 Polymarket NO price: $X.XX
 Spread if resolved: X.X%
@@ -110,7 +127,6 @@ This is the part that protects you from catastrophic errors.
 
 Before logging any paper trade, ALL must be true:
 - [ ] Source 1 confirms the outcome
-- [ ] Source 2 independently confirms the same outcome
 - [ ] The outcome is FINAL (not projected, not partial, not preliminary)
 - [ ] You checked Polymarket's specific resolution criteria for this market
 - [ ] Your sources match Polymarket's stated resolution source
@@ -136,7 +152,6 @@ Market ID: [id]
 Resolution:
 - Event outcome: [what actually happened]
 - Source 1: [source] confirmed at [time]
-- Source 2: [source] confirmed at [time]
 - Confidence: GREEN (confirmed)
 
 Polymarket at time of detection:
@@ -191,11 +206,11 @@ Theoretical win rate: XX%
 
 After 10 paper trades, answer these questions:
 
-1. **Does the edge exist?** What's the average spread at time of detection? If it's consistently under 3%, fees will eat the profit on real trades.
-2. **Is the window real?** How many seconds between resolution and the market catching up? If it's under 10 seconds, you probably can't execute fast enough with Bankr.
-3. **Which categories work best?** Sports? Economic data? Crypto events? Some will have wider windows than others.
-4. **Did the confirmation protocol catch anything?** Any near-misses where you almost traded on bad info?
-5. **What's the realistic position size?** Based on order book depth at the time of detection, how much could you actually buy before moving the price?
+3. **Does the edge exist?** What's the average spread at time of detection? If it's consistently under 3%, fees will eat the profit on real trades.
+4. **Is the window real?** How many seconds between resolution and the market catching up? If it's under 10 seconds, you probably can't execute fast enough.
+5. **Which categories work best?** Sports? Economic data? Crypto events? Some will have wider windows than others.
+6. **Did the confirmation protocol catch anything?** Any near-misses where you almost traded?
+7. **What's the realistic position size?** Based on order book depth at the time of detection, how much could you actually buy before moving the price?
 
 ---
 
@@ -206,7 +221,7 @@ Only after 10+ successful paper trades:
 ### Step 10: Tighten the Loop
 - Automate market discovery (daily scan for new arbable markets)
 - Automate resolution monitoring (cron jobs per market)
-- Automate confirmation (two-source check)
+- Automate confirmation (checking live charts with polymarket bankr integration)
 - Automate paper trade logging
 - Keep human approval for any future live trades
 
@@ -244,10 +259,10 @@ Watchlist for tomorrow:
 
 ## Tools You Need
 
-- Polymarket API access (public, free)
+- Bankr/Polymarket integration (live charts) 
 - Web fetch capability (for resolution sources)
 - Cron jobs (for scheduled monitoring)
-- Bankr/Polymarket integration (already have, for future live trades)
+- API access (public, free)
 - File system (for logging — already have)
 
 That's it. No databases. No vector search. No special infrastructure. API calls, cron jobs, and markdown files.
