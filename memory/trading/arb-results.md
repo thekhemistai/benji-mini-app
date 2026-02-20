@@ -20,7 +20,7 @@
 | Metric | Value |
 |--------|-------|
 | Total paper trades | 15 |
-| **LIVE trades** | **1** |
+| **LIVE trades** | **2** |
 | Correct resolutions | 6 |
 | Incorrect resolutions | 0 |
 | Pending resolutions | 1 |
@@ -39,14 +39,14 @@
 
 | # | Date | Market | Side | Entry | Result | P/L |
 |---|------|--------|------|-------|--------|-----|
-| 1 | 2026-02-20 11:44 | BTC Up/Down 5m | UP | Market price | ⏳ Pending | TBD |
+| 1 | 2026-02-20 11:44 | BTC Up/Down 5m | UP | Market price | ✅ Settled | TBD |
+| 2 | 2026-02-20 12:35 | BTC Up/Down 5m | UP | Market price | ⏳ Pending | TBD |
 
 **Details:**
-- Start: $67,693
-- End: $67,807 (+$114)
-- Winner: UP
+- Trade #1: Start $67,693 → End $67,807 (+$114), Winner: UP
+- Trade #2: Start $67,591 → End $67,765 (+$174), Winner: UP
 - Execution: Automated via Playwright
-- Screenshots: `trade_before_1144.png`, `trade_after_1144.png`
+- Screenshots: `trade_before_*.png`, `trade_after_*.png`
 
 ---
 
