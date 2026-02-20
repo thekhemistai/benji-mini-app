@@ -15,35 +15,87 @@
 
 ---
 
-## ✅ High-Frequency BTC Markets (5m, 15m, 1h, 4h)
+## ✅ Full Crypto Arb Universe (BTC, ETH, SOL)
 
-**API Access (Proper Method):**
-```bash
-# Use tag_slug=bitcoin (NOT tag_slug=crypto)
-curl -s "https://gamma-api.polymarket.com/events?active=true&archived=false&closed=false&limit=100&tag_slug=bitcoin"
-```
+**Total Opportunity: 700+ markets/day**
 
-**Market Types:**
-| Timeframe | Slug Pattern | Opportunities/Day | Series ID |
-|-----------|--------------|-------------------|-----------|
-| 5-minute | `btc-updown-5m-{timestamp}` | 288 | btc-up-or-down-5m |
-| 15-minute | `btc-updown-15m-{timestamp}` | 96 | btc-up-or-down-15m |
-| Hourly | `bitcoin-up-or-down-{date}-{hour}am-et` | 24 | btc-up-or-down-hourly |
-| 4-hour | `btc-updown-4h-{timestamp}` | 6 | btc-up-or-down-4h |
+### Bitcoin (BTC) — Chainlink Resolution
+**API:** `tag_slug=bitcoin`
+**Resolution Source:** Chainlink BTC/USD — https://data.chain.link/streams/btc-usd
 
-**Resolution:** Chainlink BTC/USD data feed — https://data.chain.link/streams/btc-usd
+| Timeframe | Slug Pattern | Opportunities/Day | Avg Liquidity |
+|-----------|--------------|-------------------|---------------|
+| 5-minute | `btc-updown-5m-{timestamp}` | 288 | ~$10,000 |
+| 15-minute | `btc-updown-15m-{timestamp}` | 96 | ~$20,000 |
+| Hourly | `bitcoin-up-or-down-{date}-{hour}am-et` | 24 | ~$12,000 |
+| 4-hour | `btc-updown-4h-{timestamp}` | 6 | ~$15,000 |
+| **Daily** | `bitcoin-up-or-down-{date}` | 1 | ~$50,000+ |
 
-**Key Insight:** `tag_slug=bitcoin` returns these recurring markets; `tag_slug=crypto` does not. This was the discovery gap.
-
-**Why This Matters:**
-- **Up to 288 opportunities/day** (5m markets) vs 1/day for daily BTC markets
-- Mechanical resolution via Chainlink (no subjective interpretation)
-- Fast settlement — perfect for information arbitrage
-
-**Sample Markets (Verified Active):**
+**Example Markets:**
 - https://polymarket.com/event/btc-updown-15m-1771552800
 - https://polymarket.com/event/btc-updown-5m-1771572600
-- https://polymarket.com/event/bitcoin-up-or-down-february-20-3am-et
+
+---
+
+### Solana (SOL) — Binance Resolution ⚠️ DIFFERENT SOURCE
+**API:** `tag_slug=solana`
+**Resolution Source:** Binance SOL/USDT — https://www.binance.com/en/trade/SOL_USDT
+**Critical:** SOL resolves from Binance, not Chainlink. Need separate monitoring.
+
+| Timeframe | Slug Pattern | Opportunities/Day | Avg Liquidity |
+|-----------|--------------|-------------------|---------------|
+| 5-minute | `solana-updown-5m-{timestamp}` | 288 | ~$8,000 |
+| Hourly | `solana-up-or-down-{date}-{hour}am-et` | 24 | ~$5,000-8,000 |
+| Daily | `solana-up-or-down-{date}` | 1 | ~$14,000+ |
+| Weekly Multi-Strike | `solana-above-{price}-on-{date}` | 11 strikes | ~$12,000 each |
+
+**Example Markets:**
+- https://polymarket.com/event/solana-up-or-down-february-20-11pm-et
+- https://polymarket.com/event/solana-up-or-down-on-february-20
+
+**Multi-Strike Weekly Markets:**
+- $30, $40, $50, $60, $70, $80, $90, $100, $110, $120, $130 price levels
+- All resolve from Binance 1m candle at 12:00 PM ET
+
+---
+
+### Ethereum (ETH) — TBD
+**API:** `tag_slug=ethereum`
+**Resolution Source:** Need to verify (likely Chainlink or Binance)
+
+| Timeframe | Status |
+|-----------|--------|
+| 5-minute | Confirmed active |
+| 15-minute | Need to verify |
+| Hourly | Need to verify |
+| 4-hour | Need to verify |
+
+---
+
+## 🎯 The Multi-Asset Arb Play
+
+**Key Insight:** Different assets = different resolution sources
+
+| Asset | Resolution | Source URL | Speed Priority |
+|-------|-----------|------------|----------------|
+| BTC | Chainlink | https://data.chain.link/streams/btc-usd | #1 |
+| SOL | Binance | https://www.binance.com/en/trade/SOL_USDT | #1 |
+| ETH | TBD | TBD | #2 |
+
+**Execution Strategy:**
+1. **Monitor all three assets simultaneously**
+2. **Query the correct resolution source** (Chainlink for BTC, Binance for SOL)
+3. **Confirm outcome in <30 seconds** after window closes
+4. **Check Polymarket price** — if winning side < $0.90, execute
+5. **Profit** when market settles to $1.00
+
+**Daily Opportunity Count:**
+- BTC: 414 markets/day
+- SOL: 312+ markets/day
+- ETH: TBD (~300 estimated)
+- **Total: 700+ arb opportunities/day**
+
+**Risk:** Must track which asset uses which resolution source. Querying wrong source = failed confirmation = missed arb.
 
 ---
 
