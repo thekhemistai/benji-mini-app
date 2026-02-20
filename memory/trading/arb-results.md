@@ -19,10 +19,11 @@
 
 | Metric | Value |
 |--------|-------|
-| Total paper trades | 2 |
+| Total paper trades | 1 |
 | Correct resolutions | 1 |
 | Incorrect resolutions | 0 |
-| Pending resolutions | 1 |
+| Pending resolutions | 0 |
+| Invalid trades (pre-resolution) | 1 |
 | Confirmation failures caught | 0 |
 | Average edge captured | 49% |
 | Average detection time | N/A (post-resolution) |
@@ -37,7 +38,7 @@
 | # | Date | Market | Side | Entry | Edge | Window | Result |
 |---|------|--------|------|-------|------|--------|--------|
 | 1 | 2026-02-19 | BTC Up/Down 6:50-6:55 PM ET | Up | 50.5¢ | 49% | 5 min | ✅ CORRECT |
-| 2 | 2026-02-19 | BTC Up/Down 15m (9:15-9:30 PM ET) | Up | 50.0¢ | 50% | 15 min | ⏳ PENDING |
+| 2 | 2026-02-19 | ~~BTC Up/Down 15m (9:15-9:30 PM ET)~~ | ~~Up~~ | ~~50.0¢~~ | ~~50%~~ | ~~15 min~~ | ❌ **INVALID** — Pre-resolution entry, not true arb |
 
 ### Trade #1 Details — Bitcoin Up/Down (Feb 19, 6:50-6:55 PM ET)
 **Market ID:** 1395270  
@@ -166,31 +167,31 @@ Markets where confirmation protocol prevented a trade:
 
 ---
 
-### Trade #2 Details — Bitcoin Up/Down 15m (Feb 19, 9:15-9:30 PM ET)
-**Market ID:** 1396043  
-**Market URL:** https://polymarket.com/event/btc-updown-15m-1771560900  
-**Resolution Source:** Chainlink BTC/USD data stream — https://data.chain.link/streams/btc-usd  
-**Resolution Time:** 2026-02-20T04:30:00Z (Feb 19, 9:30 PM ET / 7:30 PM MST)
+### ~~Trade #2 — INVALID ENTRY~~
+**Status:** ❌ **DISCARDED** — Pre-resolution entry violates arb protocol
 
-**Trade Setup:**
-- **Side:** UP
-- **Entry Price:** $0.50 (bestAsk)
-- **Position Size:** 200 shares ($100 theoretical)
-- **Expected Value:** $100 (if UP wins)
-- **Edge:** 50% (buying at fair value, no immediate arb opportunity detected)
+**Error:** Entered position at 50¢ BEFORE window closure. This is gambling, not arbitrage.
 
-**Market Data at Entry:**
-- bestBid: 0.49
-- bestAsk: 0.50
-- Liquidity: $22,682
-- Volume: $23.92
-- Spread: 0.01 (1%)
+**Correct Protocol (Information Arbitrage):**
+```
+Window closes → Query Chainlink (<30s) → Confirm outcome → 
+Check market price → If market < $1.00 on winning side → 
+Buy discount → Market updates → Settles at $1.00 → Profit
+```
 
-**Rationale:**
-Logging this as a baseline trade to track market efficiency. No clear arb opportunity at entry — market is pricing near 50/50. Will monitor Chainlink feed at resolution to confirm outcome and compare to market price action in final minutes.
+**Key Principle:** My job isn't to predict. It's to *see* faster than the market.
 
-**Status:** ⏳ PENDING (resolves ~7:30 PM MST)
+**What I did wrong:**
+- Bought at 50¢ before knowing the outcome
+- No price divergence existed at entry
+- Took directional risk instead of capturing spread
 
-**Outcome:** TBD
+**What proper arb looks like:**
+- Window closes at 9:30:00 PM
+- Chainlink shows: Start $67,200 → End $67,350 (UP)
+- Check Polymarket at 9:30:30 PM: UP still trading at 65¢
+- Buy UP at 65¢ (should be $1.00)
+- Market catches up: UP → $1.00
+- Profit: 35¢ per share ($35 on $65)
 
-**Lessons:** TBD*
+**Lesson documented. Protocol corrected.***

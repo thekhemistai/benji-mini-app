@@ -125,6 +125,45 @@ curl -s "https://gamma-api.polymarket.com/events?active=true&archived=false&clos
 
 ---
 
+### ⚠️ ARBITRAGE PROTOCOL — CRITICAL
+
+**WRONG (Gambling):**
+```
+Buy UP at 50¢ → Wait for window to close → Hope BTC went up
+```
+
+**RIGHT (Information Arbitrage):**
+```
+Window closes at 9:30:00 PM
+    ↓
+Query Chainlink BTC/USD (<30 seconds)
+    ↓
+Confirm: Start $67,200 → End $67,350 (UP won)
+    ↓
+Check Polymarket at 9:30:30 PM
+    ↓
+If UP trading at 65¢ (should be $1.00):
+    → Buy UP at 65¢
+    → Market updates to $1.00
+    → Profit 35¢ per share
+```
+
+**The Edge:** Speed of confirmation, not prediction accuracy.
+
+**My job isn't to predict. It's to *see* faster than the market.**
+
+**Check Script:**
+```bash
+./scripts/btc-arb-monitor.sh btc-updown-15m-{timestamp}
+```
+
+**Only trade AFTER resolution when:**
+1. Real-world outcome is confirmed (Chainlink data)
+2. Market price < $0.90 on winning side
+3. Window to trade is <60 seconds post-resolution
+
+---
+
 ## Browser Access
 
 **OpenClaw Browser (Chrome Relay)** — Primary for quick research, DexScreener charts, web UI interaction
