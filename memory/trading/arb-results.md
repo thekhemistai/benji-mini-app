@@ -20,7 +20,8 @@
 | Metric | Value |
 |--------|-------|
 | Total paper trades | 15 |
-| Correct resolutions | 5 |
+| **LIVE trades** | **1** |
+| Correct resolutions | 6 |
 | Incorrect resolutions | 0 |
 | Pending resolutions | 1 |
 | Invalid trades (pre-resolution) | 1 |
@@ -29,11 +30,27 @@
 | Average detection time | <30s post-resolution |
 | Average window duration | 5-15 min |
 | Theoretical P/L (realized) | $46.50 |
-| Theoretical win rate | 100% (realized) |
+| **Live P/L** | **TBD** |
+| Win rate | 100% (realized) |
 
 ---
 
-## Trade Log
+## Live Trades (Real Money)
+
+| # | Date | Market | Side | Entry | Result | P/L |
+|---|------|--------|------|-------|--------|-----|
+| 1 | 2026-02-20 11:44 | BTC Up/Down 5m | UP | Market price | ⏳ Pending | TBD |
+
+**Details:**
+- Start: $67,693
+- End: $67,807 (+$114)
+- Winner: UP
+- Execution: Automated via Playwright
+- Screenshots: `trade_before_1144.png`, `trade_after_1144.png`
+
+---
+
+## Paper Trades
 
 | # | Date | Market | Side | Entry | Edge | Window | Result |
 |---|------|--------|------|-------|------|--------|--------|
