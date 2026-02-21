@@ -105,18 +105,18 @@ def monitor_and_execute(market_slug: str, max_wait_minutes: int = 10):
         print("\n❌ Timeout waiting for window to close")
         return None
     
-    # Window closed — get winner
+    # Window closed — get winner (Coinbase primary, Chainlink backup)
     print("\n🔍 Querying BTC price...")
     final_price = None
     
     try:
-        final_price = get_chainlink_price()
-        print(f"   Chainlink BTC price: ${final_price:,.2f}")
+        final_price = get_coinbase_btc_price()
+        print(f"   Coinbase BTC price: ${final_price:,.2f}")
     except Exception as e:
-        print(f"   ⚠️  Chainlink failed: {e}")
+        print(f"   ⚠️  Coinbase failed: {e}")
         try:
-            final_price = get_coinbase_btc_price()
-            print(f"   Coinbase BTC price: ${final_price:,.2f}")
+            final_price = get_chainlink_price()
+            print(f"   Chainlink BTC price: ${final_price:,.2f}")
         except Exception as e2:
             print(f"   ❌ Both price sources failed: {e2}")
             return None
