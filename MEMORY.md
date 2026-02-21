@@ -141,6 +141,10 @@ On complex tasks (new projects, multi-step decisions, trading thesis validation)
 → See memory/research/alpha-sources.md  
 **Tier 1**: DexScreener API (A+), Alchemy RPC (A+), On-chain analysis (A)
 
+## Code & Research Artifacts
+- [[memory/research/polymarket-official-agents-extraction.md|Polymarket Official Agents Analysis]] — Extracted useful patterns, identified anti-patterns for arb
+- `khem_arb/` — Lightweight Python toolkit for Polymarket arbitrage (adapted from official framework)
+
 ## Memory Maintenance
 → See memory/core/memory-maintenance.md
 **Cadence**: Daily heartbeat reviews, weekly deep consolidation
