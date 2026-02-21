@@ -1,0 +1,89 @@
+{
+  "scan_date": "2026-02-21T14:04:07.963059",
+  "polymarket_summary": {
+    "total_unique": 100,
+    "trump_deportation": [],
+    "overlap_candidates": {
+      "crypto_btc": [
+        {
+          "question": "What will the price of Bitcoin be on November 4th, 2020?",
+          "slug": "what-will-the-price-of-bitcoin-be-on-november-4th-2020"
+        },
+        {
+          "question": "Will BTC break $15k before 2021?",
+          "slug": "will-btc-break-15k-before-2021-1"
+        },
+        {
+          "question": "Will $BTC break $20k before 2021?",
+          "slug": "will-btc-break-20k-before-2021"
+        },
+        {
+          "question": "Will $BTC break $20k before Thanksgiving?",
+          "slug": "will-btc-break-20k-before-thanksgiving"
+        },
+        {
+          "question": "Will $BTC break $25k before March 1st?",
+          "slug": "will-btc-break-25k-before-march-1st"
+        }
+      ],
+      "sports_championships": [
+        {
+          "question": "Who will win the 2020 League of Legends World Championship?",
+          "slug": "who-will-win-the-2020-league-of-legends-world-championship"
+        },
+        {
+          "question": "Will the Green Bay Packers or the Tampa Bay Buccaneers win the NFC Championship?",
+          "slug": "will-the-green-bay-packers-or-the-tampa-bay-buccaneers-win-the-nfc-championship"
+        },
+        {
+          "question": "Will the Buffalo Bills or the Kansas City Chiefs win the AFC Championship?",
+          "slug": "will-the-buffalo-bills-or-the-kansas-city-chiefs-win-the-afc-championship"
+        }
+      ],
+      "politics_trump": [
+        {
+          "question": "Will Trump win the 2020 U.S. presidential election?",
+          "slug": "will-trump-win-the-2020-us-presidential-election"
+        },
+        {
+          "question": "Will Donald Trump tweet announcing that he won the election before November 5th 2020?",
+          "slug": "will-donald-trump-tweet-announcing-that-he-won-the-election-before-november-5th-2020"
+        },
+        {
+          "question": "Will Donald Trump formally concede the 2020 US Election before December 1st, 2020?",
+          "slug": "will-donald-trump-formally-concede-the-2020-us-election-before-december-1st-2020"
+        },
+        {
+          "question": "Will Donald Trump attend Joe Biden\u2019s inauguration ceremony in person?",
+          "slug": "will-donald-trump-attend-joe-biden-s-inauguration-ceremony-in-person"
+        },
+        {
+          "question": "Will Donald Trump be inaugurated for his second term as President of the USA on Inauguration Day, January 20th, 2021?",
+          "slug": "will-donald-trump-be-inaugurated-for-his-second-term-as-president-of-the-usa-on-inauguration-day-january-20th-2021"
+        }
+      ],
+      "politics_elections": [
+        {
+          "question": "Will Joe Biden get Coronavirus before the election?",
+          "slug": "will-joe-biden-get-coronavirus-before-the-election"
+        },
+        {
+          "question": "Will Trump win the 2020 U.S. presidential election?",
+          "slug": "will-trump-win-the-2020-us-presidential-election"
+        },
+        {
+          "question": "Which party will win Florida in the 2020 presidential election?",
+          "slug": "which-party-will-win-florida-in-the-2020-presidential-election"
+        },
+        {
+          "question": "Will 538 outperform The Economist in forecasting the 2020 Presidential Election?",
+          "slug": "will-538-outperform-the-economist-in-forecasting-the-2020-presidential-election"
+        },
+        {
+          "question": "Which party will win Pennsylvania in the 2020 presidential election?",
+          "slug": "which-party-will-win-pennsylvania-in-the-2020-presidential-election"
+        }
+      ]
+    }
+  }
+}

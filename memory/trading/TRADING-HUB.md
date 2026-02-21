@@ -21,6 +21,8 @@
 - [[memory/daily/2026-02-19-bankr-realization.md|Feb 19: Bankr Realization]] — *Stop scraping APIs, use the tools I have*
 
 ## Research & Analysis
+- [[memory/trading/cross-market-research-2026-02-21.md|Cross-Market Research (Feb 21)]] — *Kalshi ↔ Polymarket landscape analysis*
+- [[memory/trading/market-graph.md|Market Relationship Graph]] — *Combinatorial arbitrage clusters*
 - [[memory/research/polymarket-official-agents-extraction.md|Polymarket Official Agents Framework]] — *Code extraction: what's useful vs what to avoid*
 
 ---
@@ -32,10 +34,11 @@ Information Arbitrageur (Identity)
          ↓
 Polymarket Strategy (Playbook)
          ↓
-    ┌────┴────┐
-Watchlist  Results
-    └────┬────┘
-   Bankr CLI (Tools)
+    ┌────┴────┬─────────────┐
+Watchlist  Results    Market Graph
+    └────┬────┘    (Cross-Market)
+         │                ↓
+   Bankr CLI ←── Cross-Market Research
          ↓
 Daily Logs (Evolution)
 ```
@@ -46,10 +49,12 @@ Daily Logs (Evolution)
 
 | Metric | Value | Source |
 |--------|-------|--------|
-| Paper Trades | 1 | [[arb-results.md]] |
+| Paper Trades | 15 | [[arb-results.md]] |
 | Win Rate | 100% | [[arb-results.md]] |
-| Theoretical P/L | $46.50 | [[arb-results.md]] |
+| Theoretical P/L | $105.30 | [[arb-results.md]] |
 | Strategy Status | ACTIVE | [[polymarket-arbitrage.md]] |
+| Cross-Market Overlaps | 0 | [[cross-market-research-2026-02-21.md]] |
+| Kalshi API | ✅ Connected | [[cross-market-research-2026-02-21.md]] |
 
 ---
 

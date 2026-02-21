@@ -1,0 +1,62 @@
+{
+  "watchlist_name": "Polymarket Arb Watchlist",
+  "last_updated": "2026-02-20T00:38:00Z",
+  "active_markets": [
+    {
+      "name": "Elon Musk Tweet Count (Feb 13-20)",
+      "status": "resolving_today",
+      "resolves": "2026-02-20",
+      "hours_remaining": "<18",
+      "priority": "urgent",
+      "elon_relevant": true,
+      "elon_check_completed": true,
+      "elon_tweet_estimate": "320-350",
+      "elon_most_likely_bucket": "320-339",
+      "position": null,
+      "action": "manual_verification_required_before_resolution"
+    },
+    {
+      "name": "Kevin Warsh Fed Chair Nomination",
+      "status": "watching",
+      "resolves": "2026-02-28",
+      "hours_remaining": 192,
+      "days_remaining": 8,
+      "priority": "normal",
+      "elon_relevant": false
+    },
+    {
+      "name": "US/Israel Strikes Iran by Feb 28",
+      "status": "watching", 
+      "resolves": "2026-02-28",
+      "hours_remaining": 192,
+      "days_remaining": 8,
+      "priority": "normal",
+      "elon_relevant": false
+    }
+  ],
+  "resolved_recently": [
+    {
+      "name": "S&P 500 Feb 19",
+      "resolved": "2026-02-19",
+      "result": "Down - missed participation"
+    },
+    {
+      "name": "Bitcoin Price Feb 19",
+      "resolved": "2026-02-19",
+      "result": "66,000-68,000 bucket confirmed"
+    }
+  ],
+  "infrastructure_status": {
+    "browser_relay": "unstable",
+    "brave_search": "no_api_key",
+    "x_access": "blocked",
+    "nitter": "unavailable"
+  },
+  "last_check": {
+    "timestamp": "2026-02-20T00:38:00Z",
+    "log_file": "memory/trading/logs/watchlist-check-2026-02-20-0038.json",
+    "markets_resolving_24h": 1,
+    "elon_markets_checked": 1
+  },
+  "next_check_scheduled": "2026-02-20T06:00:00Z"
+}
