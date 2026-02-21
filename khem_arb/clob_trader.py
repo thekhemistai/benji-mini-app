@@ -246,29 +246,14 @@ class KhemCLOBTrader:
             "type": "function"
         }]
         
-        # Use public RPC with fallback options
-        rpc_urls = [
-            os.getenv("POLYGON_RPC_URL"),
-            "https://polygon-rpc.com",
-            "https://rpc-mainnet.matic.network",
-            "https://matic-mainnet.chainstacklabs.com"
-        ]
+        # Use Alchemy if available, otherwise fall back to public RPC
+        alchemy_key = os.getenv("ALCHEMY_API_KEY")
+        if alchemy_key:
+            rpc_url = f"https://polygon-mainnet.g.alchemy.com/v2/{alchemy_key}"
+        else:
+            rpc_url = os.getenv("POLYGON_RPC_URL", "https://polygon-rpc.com")
         
-        w3 = None
-        for url in rpc_urls:
-            if not url:
-                continue
-            try:
-                test_w3 = Web3(Web3.HTTPProvider(url))
-                if test_w3.is_connected():
-                    w3 = test_w3
-                    break
-            except:
-                continue
-        
-        if not w3:
-            # Fall back to first URL even if not connected - will fail gracefully later
-            w3 = Web3(Web3.HTTPProvider("https://polygon-rpc.com"))
+        w3 = Web3(Web3.HTTPProvider(rpc_url))
         contract = w3.eth.contract(address=usdc_address, abi=abi)
         
         address = self.get_wallet_address()
