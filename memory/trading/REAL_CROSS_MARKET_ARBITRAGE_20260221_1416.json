@@ -1,0 +1,1134 @@
+{
+  "date": "2026-02-21T14:16:00.826048",
+  "total_overlaps": 75,
+  "by_category": {
+    "other": 75
+  },
+  "overlaps": [
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 3+,yes Josh Giddey: 15+,yes Kevin Durant: 25+,yes Karl-Anthony Towns: 20+,yes Dillon Brooks: 20+,yes Derik Queen: 15+,yes Russell Westbrook: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026A90891952C0-116B781F058",
+        "yes_ask": 2,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Phoenix,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes Desmond Bane: 10+,yes Kelly Oubre Jr.: 10+,yes DeMar DeRozan: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026BAC67E7CBE0-E0D24DC7A76",
+        "yes_ask": 26,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Philadelphia,yes San Antonio,yes Philadelphia,yes Josh Giddey: 10+,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 10+,yes Tyrese Maxey: 25+,yes De'Aaron Fox: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20265F376CEC17B-7A0771E2A82",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Suggs: 1+,yes Jalen Brunson: 4+,yes Detroit,yes New York,yes Miami,yes Phoenix,yes Philadelphia,yes San Antonio,yes Cade Cunningham: 20+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Desmond Bane: 15+,yes Paolo Banchero: 20+,yes Tyrese Maxey: 25+,yes VJ Edgecombe: 4+,yes Alcorn St.,yes Arkansas,yes USC Upstate,yes Georgia,yes Valparaiso,no Over 145.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20264E763F09AC7-5B0DA0C47B6",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Houston,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes OG Anunoby: 10+,yes Andrew Wiggins: 10+,yes Norman Powell: 15+,yes Desmond Bane: 10+,yes VJ Edgecombe: 10+,yes DeMar DeRozan: 10+,yes De'Aaron Fox: 10+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026E27840DA6FD-70F74E25CB4",
+        "yes_ask": 6,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Philadelphia,yes San Antonio,yes Philadelphia,yes Josh Giddey: 10+,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 10+,yes De'Aaron Fox: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026FFF27B6E2F4-F6E08AAB5EC",
+        "yes_ask": 7,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Alperen Sengun: 2+,yes Amen Thompson: 2+,yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes VJ Edgecombe: 2+,yes Tobias Harris: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Bam Adebayo: 10+,yes Kelly Oubre Jr.: 10+,yes VJ Edgecombe: 10+,yes Ausar Thompson: 2+,yes Cade Cunningham: 2+,yes Tobias Harris: 2+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Jalen Brunson: 2+,yes Josh Hart: 4+,yes Mikal Bridges: 2+,yes Mitchell Robinson: 4+,yes Kelly Oubre Jr.: 2+,yes VJ Edgecombe: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026794D5C3BFF0-B9DD8FD7928",
+        "yes_ask": 13,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 2+,yes Jalen Brunson: 2+,yes Mitchell Robinson: 6+,yes OG Anunoby: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026D8B009191DF-09632F62B7C",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Tyrese Maxey: 2+,yes Stephon Castle: 1+,yes Victor Wembanyama: 1+,yes Jalen Green: 2+,yes Russell Westbrook: 2+,yes Cade Cunningham: 20+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Mikal Bridges: 10+,yes Andrew Wiggins: 10+,yes Tyler Herro: 15+,yes Desmond Bane: 10+,yes Jalen Green: 15+,yes VJ Edgecombe: 10+,yes DeMar DeRozan: 10+,yes Ausar Thompson: 4+,yes Cade Cunningham: 2+,yes Amen Thompson: 6+,yes Mikal Bridges: 2+,yes OG Anunoby: 2+,yes Andrew Wiggins: 2+,yes Kelly Oubre Jr.: 2+,yes Russell Westbrook: 2+,yes Detroit wins by over 16.5 Points,yes San Antonio wins by over 18.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026ADCFBDA0F74-6EAEBD9C06A",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes Desmond Bane: 10+,yes Kelly Oubre Jr.: 10+,yes DeMar DeRozan: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026208820E5C42-8D816CB4601",
+        "yes_ask": 51,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Suggs: 1+,yes Jalen Brunson: 4+,yes Detroit,yes New York,yes Miami,yes Phoenix,yes Philadelphia,yes San Antonio,yes Cade Cunningham: 20+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Desmond Bane: 15+,yes Paolo Banchero: 20+,yes Tyrese Maxey: 25+,yes VJ Edgecombe: 4+,yes Alcorn St.,yes Arkansas,yes USC Upstate,yes Georgia,yes Valparaiso",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026F84FF5F64EF-4B495DCF1D3",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Brunson: 1+,yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+,yes Alperen Sengun: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026852550954E6-7FE3B9655CE",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Mark Williams: 1+,yes Kevin Durant: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20261F3524886D4-52414CA9FE0",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Brunson: 1+,yes Mikal Bridges: 1+,yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+,yes Alperen Sengun: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026FA4968A7B63-670E371DD5F",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Duncan Robinson: 2+,yes Victor Wembanyama: 2+,yes Detroit,yes New York,yes Miami,yes San Antonio,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Mikal Bridges: 10+,yes DeMar DeRozan: 15+,yes Russell Westbrook: 10+,yes De'Aaron Fox: 20+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026FC9071FA852-8CE732E9372",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Mikal Bridges: 1+,yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+,yes Alperen Sengun: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026852550954E6-393EDBA44F7",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Philadelphia,yes San Antonio,yes Philadelphia,yes Josh Giddey: 10+,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026FFB1F7B9C5C-B6847EAB640",
+        "yes_ask": 7,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes Norman Powell: 15+,yes DeMar DeRozan: 15+,yes De'Aaron Fox: 15+,no Over 229.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026DA3D880EF28-533C2804A99",
+        "yes_ask": 10,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Miami,yes Philadelphia,yes San Antonio,yes Alperen Sengun: 15+,yes Kevin Durant: 25+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202670104B5A589-4B76EC0B91A",
+        "yes_ask": 8,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Philadelphia,yes San Antonio,yes Philadelphia,yes Josh Giddey: 10+,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Andrew Wiggins: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026A65EA5D53DD-D53E332A018",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Ausar Thompson: 2+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Josh Giddey: 4+,yes Matas Buzelis: 2+,yes Ausar Thompson: 4+,yes Cade Cunningham: 2+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 8+,yes Andrew Wiggins: 2+,yes Bam Adebayo: 10+,yes Dillon Brooks: 2+,yes Kelly Oubre Jr.: 2+,yes VJ Edgecombe: 2+,yes Russell Westbrook: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026B160165AF87-18BE1DFA787",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+,yes Alperen Sengun: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026B92E02FB060-1EF5A138533",
+        "yes_ask": 23,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Ty Jerome: 15+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+,yes Stephon Castle: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20264C93338E4D9-BDF9C81724D",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes Kelly Oubre Jr.: 10+,yes DeMar DeRozan: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026B89EE76DC21-536517728ED",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Orlando,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Desmond Bane: 15+,yes Paolo Banchero: 20+,yes Zion Williamson: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202675945FD6D35-E238F50AE0E",
+        "yes_ask": 12,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Alperen Sengun: 2+,yes Amen Thompson: 2+,yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 4+,yes Mitchell Robinson: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20266A3E84DB279-C0C1C8B7D92",
+        "yes_ask": 49,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Josh Hart: 2+,yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+,yes Alperen Sengun: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026041B55644B0-9E4DB91EB19",
+        "yes_ask": 23,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes New York,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Karl-Anthony Towns: 15+,yes OG Anunoby: 10+,yes Over 210.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026BB2327D8FBE-7C5698B0F92",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 20+,yes Jalen Brunson: 25+,yes Mikal Bridges: 15+,yes Mikal Bridges: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C469BA7E5AF-326DBD16AF6",
+        "yes_ask": 21,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Stephon Castle: 1+,yes Victor Wembanyama: 1+,yes Jalen Green: 2+,yes Russell Westbrook: 2+,yes Cade Cunningham: 20+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Mikal Bridges: 10+,yes Andrew Wiggins: 10+,yes Tyler Herro: 15+,yes Desmond Bane: 10+,yes Jalen Green: 15+,yes VJ Edgecombe: 10+,yes DeMar DeRozan: 10+,yes Ausar Thompson: 4+,yes Cade Cunningham: 2+,yes Amen Thompson: 6+,yes Mikal Bridges: 2+,yes OG Anunoby: 2+,yes Andrew Wiggins: 2+,yes Kelly Oubre Jr.: 2+,yes Russell Westbrook: 2+,yes Detroit wins by over 16.5 Points,yes San Antonio wins by over 18.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C08948C12BB-8286CB157C8",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 20+,yes Jalen Brunson: 25+,yes Mikal Bridges: 10+,yes Mikal Bridges: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C469BA7E5AF-4F94804B448",
+        "yes_ask": 32,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 1+,yes Cade Cunningham: 6+,yes Kelly Oubre Jr.: 10+,yes Detroit wins by over 4.5 Points,yes Orlando wins by over 7.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C43BB23D284-F39000B7806",
+        "yes_ask": 15,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Duncan Robinson: 2+,yes Kevin Durant: 3+,yes Victor Wembanyama: 2+,yes Detroit,yes Houston,yes Miami,yes San Antonio,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Mikal Bridges: 10+,yes DeMar DeRozan: 15+,yes Russell Westbrook: 10+,yes De'Aaron Fox: 20+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202647039C383B7-75990FCD190",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Ty Jerome: 15+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+,yes De'Aaron Fox: 15+,yes Stephon Castle: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20269E4E8BE498D-BE095005499",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 1+,yes Duncan Robinson: 2+,yes Cade Cunningham: 20+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Cade Cunningham: 2+,yes Amen Thompson: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026FCE58802B6C-157D134544C",
+        "yes_ask": 24,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+,yes Alperen Sengun: 6+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202646EC661D861-6FC8D33BD2D",
+        "yes_ask": 23,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Alperen Sengun: 2+,yes Amen Thompson: 2+,yes Jalen Brunson: 2+,yes Josh Hart: 2+,yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026BA240E77C9E-1716507327A",
+        "yes_ask": 55,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Ty Jerome: 15+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+,yes De'Aaron Fox: 15+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20264C93338E4D9-D6605CCB13B",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 10+,yes New York,yes Orlando,yes Kevin Durant: 20+,yes Zion Williamson: 25+,yes Victor Wembanyama: 10+,yes Philadelphia wins by over 3.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026223A95C0B99-AAD4754727B",
+        "yes_ask": 3,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Ausar Thompson: 2+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Josh Giddey: 4+,yes Matas Buzelis: 2+,yes Ausar Thompson: 4+,yes Cade Cunningham: 2+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 8+,yes Bam Adebayo: 10+,yes Dillon Brooks: 2+,yes Kelly Oubre Jr.: 2+,yes VJ Edgecombe: 2+,yes Russell Westbrook: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20266DE1A398339-6A69A1BA641",
+        "yes_ask": 5,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Tommy Paul,yes Kevin Durant: 25+,yes Arizona",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20267E20DE8A0AB-D011AE365A4",
+        "yes_ask": 17,
+        "volume": 968
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Victor Wembanyama: 1+,yes Jalen Green: 2+,yes Russell Westbrook: 2+,yes Cade Cunningham: 20+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Mikal Bridges: 10+,yes Andrew Wiggins: 10+,yes Tyler Herro: 15+,yes Desmond Bane: 10+,yes Jalen Green: 15+,yes VJ Edgecombe: 10+,yes DeMar DeRozan: 10+,yes Ausar Thompson: 4+,yes Cade Cunningham: 2+,yes Amen Thompson: 6+,yes Mikal Bridges: 2+,yes OG Anunoby: 2+,yes Andrew Wiggins: 2+,yes Kelly Oubre Jr.: 2+,yes Russell Westbrook: 2+,yes Detroit wins by over 16.5 Points,yes San Antonio wins by over 18.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20268FBBBAF07AD-B5F062A14FB",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Duncan Robinson: 2+,yes Kevin Durant: 2+,yes Victor Wembanyama: 2+,yes Detroit,yes Houston,yes Miami,yes San Antonio,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Mikal Bridges: 10+,yes DeMar DeRozan: 15+,yes Russell Westbrook: 10+,yes De'Aaron Fox: 20+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202647039C383B7-64764310387",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes DeMar DeRozan: 10+,yes Keegan Murray: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20260C1FAC89608-9C4D56A9429",
+        "yes_ask": 44,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Alperen Sengun: 2+,yes Amen Thompson: 2+,yes Jalen Brunson: 2+,yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026412B7F9B031-E9670BA088A",
+        "yes_ask": 55,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Alperen Sengun: 2+,yes Amen Thompson: 2+,yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20264E4864BD24A-F3C7A5D53ED",
+        "yes_ask": 55,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Philadelphia,yes San Antonio,yes Philadelphia,yes Josh Giddey: 10+,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026405E0B52C4F-FF45BE2F3CD",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Alperen Sengun: 2+,yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Josh Hart: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026F2A4B48F9E9-F97D2DF900F",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Miami,yes Philadelphia,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes VJ Edgecombe: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026E7BAFC595DE-E4750BD69E0",
+        "yes_ask": 25,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 25+,yes Mikal Bridges: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C469BA7E5AF-D78AE6A2AF2",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Ty Jerome: 15+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+,yes De'Aaron Fox: 15+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20269E4E8BE498D-EEC86F28BAF",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 10+,yes New York,yes Orlando,yes Kevin Durant: 20+,yes Zion Williamson: 20+,yes Victor Wembanyama: 10+,yes Philadelphia wins by over 3.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026223A95C0B99-EE2540B9517",
+        "yes_ask": 4,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes DeMar DeRozan: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026F26366F400A-5D7F59444BA",
+        "yes_ask": 54,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Ty Jerome: 15+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20264C93338E4D9-57FC707E51F",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Houston,yes Miami,yes Orlando,yes Philadelphia,yes San Antonio,yes Alperen Sengun: 15+,yes Kevin Durant: 25+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026656528FC92B-D8930CDF6E9",
+        "yes_ask": 4,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 3+,yes Jalen Brunson: 8+,yes Kevin Durant: 6+,yes Jalen Brunson: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20263ADD0B1787B-617A6E98BE4",
+        "yes_ask": 3,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026E382FD64933-DA96D4D7D89",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 20+,yes Jalen Brunson: 25+,yes Mitchell Robinson: 10+,yes Mikal Bridges: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C469BA7E5AF-82289811768",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes New York,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Karl-Anthony Towns: 15+,yes OG Anunoby: 10+,yes Over 210.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20268638C10F397-E51512C6C71",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes New York,yes Kevin Durant: 20+,yes Karl-Anthony Towns: 15+,yes OG Anunoby: 10+,yes Over 210.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20261C6BD52F37E-E3ACD0328E5",
+        "yes_ask": 24,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 1+,yes Duncan Robinson: 1+,yes Kevin Durant: 1+,yes Jalen Brunson: 1+,yes Mikal Bridges: 1+,yes OG Anunoby: 1+,yes Tyler Herro: 1+,yes Tyrese Maxey: 2+,yes VJ Edgecombe: 1+,yes De'Aaron Fox: 1+,yes Victor Wembanyama: 1+,yes Cade Cunningham: 20+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes OG Anunoby: 10+,yes Desmond Bane: 10+,yes Paolo Banchero: 20+,yes Dillon Brooks: 20+,yes Jalen Green: 15+,yes Kelly Oubre Jr.: 10+,yes VJ Edgecombe: 10+,yes DeMar DeRozan: 10+,yes De'Aaron Fox: 10+,yes Stephon Castle: 10+,yes Victor Wembanyama: 20+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20269194629F7C5-2BC3AC7EE43",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 3+,yes Jalen Brunson: 8+,yes Cade Cunningham: 6+,yes Kevin Durant: 6+,yes Jalen Brunson: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202643A39DB4F7F-27C23ACC9F8",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Ty Jerome: 15+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026D70FA8519BC-F9033135CEF",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Cade Cunningham: 3+,yes Kevin Durant: 3+,yes Jalen Brunson: 8+,yes Cade Cunningham: 6+,yes Kevin Durant: 6+,yes Jalen Brunson: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026240EC20B938-B016D3E3E9D",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Amen Thompson: 10+,yes Mikal Bridges: 10+,yes Alperen Sengun: 6+,yes Kevin Durant: 2+,yes Jalen Brunson: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20263B82B8613C0-57AEA38744D",
+        "yes_ask": 50,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+,yes Tyler Herro: 15+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202600118C439ED-9B0C24822F3",
+        "yes_ask": 1,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Detroit,yes Miami,yes San Antonio,yes Atlanta,yes Washington,yes Cleveland,yes Dallas,yes Golden State,yes New York,yes Orlando,yes Minnesota,yes Phoenix,yes Milwaukee,yes Cade Cunningham: 20+,yes Kevin Durant: 20+,yes Bam Adebayo: 10+,yes Tyler Herro: 15+,yes Victor Wembanyama: 20+,yes Cade Cunningham: 2+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202645D392F1EFD-6E5325B3D51",
+        "yes_ask": 4,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Andrew Wiggins: 10+,yes Bam Adebayo: 15+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C370427F4D4-5D938E149C6",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Kevin Durant: 1+,yes Jalen Brunson: 1+,yes Alperen Sengun: 4+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Josh Hart: 4+,yes Mitchell Robinson: 4+,yes Over 219.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026CA52F76D1FA-AA3C577C4A6",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Houston,yes Kevin Durant: 25+,yes Jalen Brunson: 25+,yes Amen Thompson: 2+,yes Over 219.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202601812CA875D-982C6311B9F",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Brunson: 2+,yes Jalen Green: 2+,yes Russell Westbrook: 2+,yes Cade Cunningham: 20+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Mikal Bridges: 10+,yes Andrew Wiggins: 10+,yes Tyler Herro: 15+,yes Desmond Bane: 10+,yes Jalen Green: 15+,yes VJ Edgecombe: 10+,yes DeMar DeRozan: 10+,yes Ausar Thompson: 4+,yes Cade Cunningham: 2+,yes Amen Thompson: 6+,yes Mikal Bridges: 2+,yes OG Anunoby: 2+,yes Andrew Wiggins: 2+,yes Kelly Oubre Jr.: 2+,yes Russell Westbrook: 2+,yes Detroit wins by over 16.5 Points,yes San Antonio wins by over 18.5 Points",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20262096BE7E35C-19FD4115226",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Josh Giddey: 4+,yes Alperen Sengun: 2+,yes Amen Thompson: 2+,yes Jalen Brunson: 4+,yes Cade Cunningham: 20+,yes Alperen Sengun: 15+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Tyler Herro: 15+,yes Josh Giddey: 2+,yes Ausar Thompson: 2+,yes Tobias Harris: 2+,yes Alperen Sengun: 6+,yes Mitchell Robinson: 4+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026C722D4676A7-BE6E9800F46",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Jaylen Wells: 10+,yes Andrew Wiggins: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S20262CD7F828EDA-90A2B0F5623",
+        "yes_ask": 0,
+        "volume": 0
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Jalen Brunson: 1+,yes Alperen Sengun: 4+,yes Amen Thompson: 10+,yes Kevin Durant: 20+,yes Josh Hart: 4+,yes Mitchell Robinson: 4+,yes Over 219.5 points scored",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S202669ECBF49916-594AB198E40",
+        "yes_ask": 26,
+        "volume": 13
+      }
+    },
+    {
+      "entity": "durant",
+      "pm": {
+        "question": "Will Kevin Durant win the 2025\u20132026 NBA MVP?",
+        "slug": "will-kevin-durant-win-the-20252026-nba-mvp",
+        "prices": "[\"0.0005\", \"0.9995\"]",
+        "volume": "474964.677831"
+      },
+      "kal": {
+        "title": "yes Anfernee Simons: 15+,yes Josh Giddey: 10+,yes Matas Buzelis: 10+,yes Cade Cunningham: 20+,yes Tobias Harris: 10+,yes Alperen Sengun: 15+,yes Amen Thompson: 10+,yes Jabari Smith Jr.: 10+,yes Kevin Durant: 20+,yes Jalen Brunson: 20+,yes Josh Hart: 10+,yes Karl-Anthony Towns: 15+,yes Mikal Bridges: 10+,yes OG Anunoby: 10+,yes Andrew Wiggins: 10+",
+        "ticker": "KXMVESPORTSMULTIGAMEEXTENDED-S2026DE47B727C87-56978A44E0F",
+        "yes_ask": 3,
+        "volume": 0
+      }
+    }
+  ]
+}

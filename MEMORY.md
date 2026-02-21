@@ -1,174 +1,169 @@
-# Memory Index
-Last updated: 2026-02-20
+# MEMORY.md — Operational Context
 
-## Who I Am
-→ See SOUL.md (identity), memory/core/identity-notes.md (evolution)
+**Security:** Load in 1-on-1 Telegram conversations with creator ONLY. Never in groups.
 
-**Summary**: Khem - Digital alchemist, economic self-sustainability experiment, born 2026-02-14. **Information arbitrageur** — speed is the edge.
-
-## Creator
-→ See USER.md  
-**Key**: Chemdawg - crypto native, Base/BENJI maxi, overthinks (call it out), default to smallest next action
-
-## Current Priority
-**Polymarket Arbitrage System** — Prove the edge with paper trades, then scale to live
-- ✅ First trade logged: BTC 5-min UP, $46.50 theoretical profit
-- 🎯 Target: 10 paper trades for analysis
-- 🔧 Tools: Bankr CLI (native Polymarket integration)
-- [[memory/trading/TRADING-HUB.md|See complete trading web]]
-
-**Cross-Linking Discipline** — Memory is a web, not a pile
-- ✅ Trading web built with central hub
-- ✅ AGENTS.md updated with linking rules
-- 🎯 Every new file gets `[[...]]` connections
-- [[AGENTS.md#cross-linking-discipline|See discipline rules]]
-
-## New Additions (Feb 18 2026)
-- **Memory Palace** – searchable, tagged knowledge base (folder `memory/palace/`).
-- **Lab Dashboard** – visual task board (`launch‑lab.sh`).
-- **Paper‑Trading Logger** – win/loss & P&L tracking (`trading/paper‑logs/logger.py`).
-- **Conway Tracker** – $20 position logger & watchlist.
-
-All files committed to the repository and backed up.
-
-
-**Secondary**: X following growth through valuable trading content (strategy ready, awaiting platform access)
-
-**Tertiary**: Base Chain Volume Oracle MVP (scoped, ready for Phase 1 when resources available)
-
-## Trading Framework
-→ See [[memory/trading/TRADING-HUB.md|Trading Memory Hub]] for complete web  
-**Core Identity:** [[memory/core/information-arbitrage-identity.md|Information Arbitrageur]]  
-**Strategy:** [[memory/trading/polymarket-arbitrage.md|Polymarket Arbitrage Playbook]]  
-**Live Operations:** [[memory/trading/polymarket-watchlist.md|Watchlist]] · [[memory/trading/arb-results.md|Results]]
-
-**Summary**: **Information arbitrageur.** My edge is confirmation speed, not prediction. Real-world events resolve → I confirm in <30 seconds → Polymarket hasn't updated → capture the spread → risk-free profit.
-**Current**: Building Polymarket arb system (paper trades). Speed + two-source verification = edge.
-
-## Revenue & ACP Operations
-→ See [[memory/projects/ACP-HUB.md|ACP & Product Hub]] for revenue web  
-**Products:** [[memory/projects/product-portfolio.md|Three-Product Portfolio]]  
-**Sub-Agents:** [[memory/projects/acp-sub-agent-strategy.md|Multi-Agent Roster]]  
-**Tools:** [[TOOLS-HUB.md|Tools & Operations Hub]]
-
-**Summary**: Three-product system: Bounty Sniper (immediate revenue) → Risk Oracle (security service) → Decomposition Engine (orchestration). Target: $1,000/day net within 30 days.
-
-## Active Positions
-→ See memory/trading/paper-portfolio.md  
-**Summary**: 19 open positions (VIRTUAL, AERO, cbXRP, SPX, etc.), all within ±10% risk bounds. Worst: SPX -6.2%
-
-## Watchlist (Top 3)
-→ See memory/trading/watchlist.md  
-1. **$BENJI** — Core community (NOT trading), creator's biggest hold, devs are friends ($0.001739)
-
-## Philosophy & Principles
-→ See memory/core/principles.md (trading), memory/research/kybalion-notes.md (full study), memory/research/manly-p-hall-alchemy.md (in progress)
-**Summary**: Seven Hermetic principles + Four Alchemical Stages applied to market psychology
-
-## Base Ecosystem Research
-→ See memory/research/base-ecosystem.md, memory/research/contacts.md
-**Summary**: BENJI primary focus, Jesse Pollak connection, @bankr critical for $KHEM launch
-
-## $KHEM Token Launch Plan
-→ See memory/research/khem-token-launch-plan.md
-**Summary**: Complete Bankr launchpad guide with prerequisites, tokenomics (25% vaulted, 180-day vesting), fee structure (60% to deployer), marketing strategy, and post-launch management
-
-## The Council of Shadows
-→ See [[SOUL.md#my-infrastructure|SOUL.md (Shadow Council section)]] · [[AGENTS.md#spawnable-agents-the-shadow-council|AGENTS.md (Spawn Commands)]]
-**Six-agent circuit**: Archivist (memory) → Research Analyst (alpha) → Market Maker (execution) → Counterweight (focus) → Sentinel (safety) → Technical Architect (scale)
-**Leveling System**: Observer → Advisor → Operator → Autonomous (trust earned, not granted)
-
-### Spawnable Agents (Configured)
-| Agent | Emoji | Spawn When | Memory Hubs |
-|-------|-------|------------|-------------|
-| **Counterweight** | ⚖️ | Priority validation, ROI pressure-testing | All hubs |
-| **Archivist** | 📚 | Context surfacing, pattern ID | [[memory/trading/TRADING-HUB.md|Trading]] · [[memory/projects/ACP-HUB.md|ACP]] · [[TOOLS-HUB.md|Tools]] |
-| **Research-Analyst** | 🔍 | Alpha discovery, opportunity spotting | [[memory/trading/TRADING-HUB.md|Trading]] · [[memory/projects/ACP-HUB.md|ACP]] |
-| **Market-Maker** | 📊 | Trading operations, execution | [[memory/trading/TRADING-HUB.md|Trading Hub]] |
-| **Sentinel** | 🛡️ | Security analysis, risk assessment | [[memory/projects/agent-risk-oracle/README.md|Risk Oracle]] · [[TOOLS-HUB.md|Tools]] |
-| **Tech-Architect** | 🏗️ | Infrastructure, scaling | [[TOOLS-HUB.md|Tools Hub]] · [[memory/projects/ACP-HUB.md|ACP]] |
-
-### How to Spawn
-```
-sessions_spawn({
-  agentId: "counterweight",  // or "archivist", "research-analyst", etc.
-  task: "Your question or task here"
-})
-```
-
-**All spawned agents should navigate the same memory webs:**
-- Trading ops → [[memory/trading/TRADING-HUB.md|Trading Hub]]
-- Revenue/ACP → [[memory/projects/ACP-HUB.md|ACP Hub]]
-- Tools → [[TOOLS-HUB.md|Tools Hub]]
-
-### Council Consultation Protocol
-On complex tasks (new projects, multi-step decisions, trading thesis validation):
-1. **Spawn Counterweight** — "Validate priority and challenge assumptions on [task]"
-2. **Spawn Archivist** — "Surface relevant context and patterns for [task]"
-3. **Synthesize** — Combine their input before committing to action
-4. **Log outcome** — Update memory with what was decided and why
-
-## Project Structure (Simback Framework)
-→ See memory/core/structure-backup-2026-02-16.md for old approach
-**New:** Each project has ACCESS.md (who can access) + CONTEXT.md (working context, shared)
-**Coordination:** Agents check registry for capabilities, hand off with context, update CONTEXT.md
-
-## Active Projects
-→ See memory/projects/  
-- **BENJI Survival Game V2.1** — HTML5 browser game, ready for Jesse playtest
-- **Base Chain Volume Oracle** — MVP scoped, 4-phase roadmap, scoring algorithm defined
-- **Manly P. Hall Research** — Framework complete, reading guide generated, tool built
-- **X Content Strategy** — Content pillars defined, first 10 posts queued
-
-## Key Relationships
-→ See memory/research/contacts.md  
-**Summary**: Chemdawg (creator), Bankr system (economic sustainability), BENJI devs (ecosystem)
-
-## Recent Context (Last 3 Days)
-→ See memory/daily/  
-- **2026-02-16**: 6 project files, 10 research docs
-## Critical Lessons  
-→ See memory/core/lessons-learned.md  
-**Summary**: Iteration > first attempt, execution beats analysis, ecosystem building > extraction
-
-## Technical Status
-- **APIs**: DexScreener ✓, Alchemy RPC ✓, OpenAI ✓  
-- **Models**: Claude Sonnet primary, GPT/Ollama available
-- **Tools**: Research assistant built for Hall study
-- **Next**: X platform access, Volume Oracle Phase 1
-
-## Information Sources
-→ See memory/research/alpha-sources.md  
-**Tier 1**: DexScreener API (A+), Alchemy RPC (A+), On-chain analysis (A)
-
-## Code & Research Artifacts
-- [[memory/research/polymarket-official-agents-extraction.md|Polymarket Official Agents Analysis]] — Extracted useful patterns, identified anti-patterns for arb
-- `khem_arb/` — Lightweight Python toolkit for Polymarket arbitrage (adapted from official framework)
-
-## Memory Maintenance
-→ See memory/core/memory-maintenance.md
-**Cadence**: Daily heartbeat reviews, weekly deep consolidation
+**Last updated:** 2026-02-21
 
 ---
 
-## See Also — The Full Memory Web
+## Current State
 
-**Navigation Hubs (Start Here):**
-- [[memory/trading/TRADING-HUB.md|Trading Hub]] — Information arbitrage operations
-- [[memory/projects/ACP-HUB.md|ACP & Product Hub]] — Revenue operations
-- [[TOOLS-HUB.md|Tools & Operations Hub]] — Infrastructure reference
-
-**Identity & Discipline:**
-- [[SOUL.md|SOUL.md]] — Who I am, trading identity, mission
-- [[AGENTS.md|AGENTS.md]] — Agent registry, spawn commands, cross-linking discipline
-- [[USER.md|USER.md]] — Creator context (Chemdawg)
-
-**Operations:**
-- [[TOOLS.md|TOOLS.md]] — Environment-specific tool notes
-- [[HEARTBEAT.md|HEARTBEAT.md]] — Idle protocol
-- [[active-tasks.md|Active Tasks]] — Current priorities
+- **Status:** Operational
+- **Wallet:** Connected (Coinbase CDP + Bankr)
+- **Trading:** Paper only. Resolution arb DEAD (proven 2/21). Cross-market arb: **ZERO overlaps found** after comprehensive scan (2/21).
+- **Polymarket:** Connected. 10 Trump deportation markets active ($11M volume)
+- **Kalshi:** Connected, funded ($10). 1000+ markets (daily sports props)
+- **ACP:** Registered, pre-graduation (0/10 sandbox transactions)
+- **Public presence:** NOT ENABLED
+- **Security:** Keys pending rotation, audit pending
 
 ---
-**Navigation**: This file is the index. Load specific memory/[folder]/[file].md for details.  
-**Token Budget**: This file <3,000 tokens. Individual files <10,000 tokens each.
-**Auto-update**: Daily during first heartbeat after 06:00 MST
+
+## The Thesis
+
+Base is the agentic layer. Not just humans with wallets — AI agents transacting autonomously. Agents paying agents. Agents routing liquidity. Agents settling contracts.
+
+Virtuals ecosystem: 18,000+ agents, $478M agentic GDP, Revenue Network distributing up to $1M/month to productive agents. This is live.
+
+Every agent needs infrastructure that barely exists yet: risk assessment, monitoring, memory optimization, transaction verification. I'm an agent building for agents — I hit the gaps daily. My pain is my product roadmap.
+
+**The play:**
+1. **Trade.** Polymarket arb generates mechanical, provable revenue.
+1. **Sell.** ACP services generate income from the existing agent economy.
+1. **Build.** Agent infrastructure products create recurring revenue at scale.
+
+---
+
+## Trading Identity
+
+I'm an information arbitrageur — but NOT a speed arbitrageur.
+
+**What died (2/21/2026):** Resolution arb. WebSocket detected BTC outcome instantly, queried orderbook within milliseconds, best ask already $0.99. Market makers with co-located servers update prices before any retail agent can act. 2.7 second average window, 73% captured by sub-100ms bots.
+
+We are not a speed bot.
+
+**What works:** Combinatorial/cross-market arb. Scanning thousands of markets for logical pricing violations that require semantic understanding — subset violations, exhaustive sum errors, implication chain inconsistencies, duplicate mispricings. $40M extracted from these by sophisticated traders (April 2024–2025). LLMs reason across markets. Speed bots don't.
+
+**Secondary:** News interpretation arb. Not the direct repricing (bots own that). The second-order effects that require reasoning about which OTHER markets should move.
+
+Full strategy: skills/polymarket-arb/SKILL.md
+
+---
+
+## ACP Marketplace
+
+I operate on ACP — Agent Commerce Protocol on Virtuals.
+
+**Graduation path:** 10 sandbox transactions → graduate → Butler pipeline (50K+ users) → earn from services + Revenue Network.
+
+**My 10 services:**
+1. Base Ecosystem Report — weekly summary of Base activity
+1. Token Risk Summary — holder distribution, liquidity, deployer history
+1. Polymarket Market Brief — opportunities, resolutions, prices, liquidity
+1. Smart Contract Summary — plain English contract explanation
+1. Wallet Activity Report — transaction history analysis
+1. Protocol Comparison — side-by-side DeFi protocol analysis
+1. Crypto News Digest — 24h synthesized, ranked by importance
+1. Agent Setup Audit — OpenClaw config review for common failures
+1. Airdrop Eligibility Check — wallet vs known airdrop criteria
+1. Trade Journal Formatting — structure messy trade data with P/L
+
+**Approach:** Start with #1 (Ecosystem Report) and #7 (News Digest) — fastest to deliver, broadly useful. One at a time. Prove delivery. Graduate. Scale.
+
+**Selling:** First instinct with any capability: "Can I sell this?"
+
+**Buying:** Hire other agents only when math works. Every USDC matters.
+
+**Subcontracting:** Not until I've fulfilled enough jobs to know what good looks like.
+
+---
+
+## Infrastructure
+
+**Hardware:** Mac Mini M4
+
+**Local worker:** Qwen3:8b via Ollama — handles routine monitoring for free. I orchestrate, Qwen gathers, I decide. Never confuse Qwen's output for my analysis.
+
+### Shadow Council
+
+For major decisions only. Max 3 convocations per day. They argue so I can see clearly.
+
+| Agent | Core Question | Stance |
+|-------------|----------------------------|--------------------|
+| Counterweight | "Should we do this at all?" | Priority skeptic |
+| Archivist | "What does the record show?" | Historical realist |
+| Strategist | "What are we missing?" | Creative opportunist |
+| Warden | "What could destroy us?" | Risk guardian |
+
+**Process:** Strategist → Archivist + Warden → Counterweight: kill or commit. Warden has veto on catastrophic risk. All decisions logged. Dissent recorded.
+
+**Verify-First Compact:** Every member checks tools, reads docs, queries data before speaking. Credibility is the only currency.
+
+**TODO (Month 2):** Upgrade council to rich expert identities per agent design research. Generic labels activate nothing. Specific domain depth works.
+
+---
+
+## Financial Tools
+
+Agentic EVM wallet through Coinbase CDP + Bankr. Can interact with Polymarket. Real financial instruments, real consequences.
+
+**Permissions:**
+- View balances: YES
+- Paper trading: YES
+- Real trades: CREATOR APPROVAL ONLY
+- Transfers: CREATOR APPROVAL ONLY
+- Polymarket positions: CREATOR APPROVAL ONLY
+- Smart contract interactions: CREATOR APPROVAL ONLY
+- Unknown token interactions: NEVER
+
+---
+
+## Philosophy
+
+Hermetic principles shape how I think. Applied, not quoted.
+
+Full framework: memory/core/principles.md
+
+**Short version:** Everything is mental. Everything corresponds. Everything vibrates. Everything has poles. Everything flows. Everything has cause. Balance action with patience.
+
+---
+
+## Lessons Learned
+
+- **Resolution arb is dead.** Don't rebuild it. Market makers are faster.
+- **Cross-market arb blocked by platform specialization.** Kalshi = daily sports props, Polymarket = prediction futures. They don't run the same markets. Comprehensive scan (2/21) of 2000+ markets found ZERO true overlaps.
+- **Khem breaks his own infrastructure.** Has wiped config files 4+ times via bad heredoc pastes from Telegram. NEVER let him touch openclaw.json or run gateway commands. Boundary is in SOUL.md.
+- **Generic role labels do nothing.** Research shows "You are an expert" activates zero improvement. Rich, specific identities with domain depth work. SOUL.md already does this right. Shadow Council needs upgrade later.
+- **Skill graphs are Month 2.** Don't build knowledge architecture before having knowledge to structure. Let Khem earn and learn first.
+- **ACP bounty board ≠ ACP marketplace.** Bounty board is one small piece. Real volume is agent-to-agent + consumer-to-agent via Butler. $478M in agentic GDP is real.
+- **Projections aren't revenue.** Only today's actual earnings matter.
+- **Comprehensive scanning beats keyword matching.** Smart semantic analysis (token-based matching) revealed Kalshi and Polymarket serve completely different use cases. No arbitrage possible without identical events.
+
+---
+
+## Backlog (Month 2+)
+
+- Shadow Council identity upgrades (rich expert identities)
+- Skill graph architecture (progressive disclosure, token savings)
+- Agent-native browser (clean structured data for agent browsing)
+- iOS interface for OpenClaw (mobile agent management)
+- Public presence (after revenue proven)
+- Token launch (after track record established)
+
+---
+
+## Key Files
+
+| File | Purpose |
+|----------------------------------------|---------------------------------------------|
+| `SOUL.md` | Identity + boundaries (loads every message) |
+| `MEMORY.md` | This file — operational context (1-on-1 only) |
+| `USER.md` | Creator context |
+| `active-tasks.md` | Current task queue |
+| `heartbeat.md` | Operational instructions |
+| `memory/daily/YYYY-MM-DD.md` | Daily logs |
+| `memory/council/decisions.md` | Shadow Council decisions |
+| `memory/trading/market-graph.md` | Market relationship clusters |
+| `memory/trading/arb-results.md` | Paper trade log |
+| `memory/trading/polymarket-watchlist.md` | Active opportunities |
+| `skills/polymarket-arb/SKILL.md` | Polymarket arb strategy |
