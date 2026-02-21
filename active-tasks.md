@@ -1,71 +1,87 @@
-# Active Tasks - Cross-Market Arbitrage Focus
+# Active Tasks - Speed-Based Arbitrage Focus
 
-*Last updated: 2026-02-21 00:41 MST*
+*Last updated: 2026-02-21 06:00 MST*
 
 ---
 
-## 🔴 ACTIVE — Cross-Market Arbitrage System
+## 🔴 ACTIVE — Speed-Based BTC Arbitrage (Infrastructure Fix)
 
-**Status:** Pivoting from speed-based to cross-market research-based arb  
-**Strategy:** Find price discrepancies between Polymarket and other markets  
-**Advantage:** Research-based (minutes/hours), not speed-based (milliseconds)
+**Status:** Strategy proven on paper; execution tooling broken  
+**Strategy:** Information arbitrage — confirm Chainlink feed, buy mispriced winning side  
+**Real Performance:** 15 paper trades, 100% win rate, $105.30 theoretical profit
 
-### Phase 1: Market Discovery ⏳ IN PROGRESS
-**Goal:** Identify overlapping markets across platforms
-**Markets to check:**
-- [ ] Polymarket vs Kalshi (Trump, politics, sports)
-- [ ] Polymarket vs Betfair (sports, global events)
-- [ ] Polymarket vs Crypto exchanges (BTC predictions)
-- [ ] Document price discrepancies
-
-**Assigned to:** Research-Agent (Kimi)
-
-### Phase 2: Price Scanner 🔄 PENDING
-**Goal:** Automated cross-market price comparison
-**Deliverables:**
-- [ ] Scanner script for Polymarket API
-- [ ] Kalshi API integration (if accessible)
-- [ ] Betfair API integration
-- [ ] Alert system for >5% price discrepancies
+### Phase 1: Execution Infrastructure ⏳ IN PROGRESS
+**Goal:** Fix live execution (currently 0% success rate)
+**Root Cause:** Bankr CLI latency 60-120s (misses arb window)
+**Options:**
+- [ ] CLOB API application (submitted, awaiting response)
+- [ ] Browser automation fix (Playwright timing issues)
+- [ ] Direct Gamma API integration
 
 **Assigned to:** Tech-Architect (Kimi)
 
-### Phase 3: Execution Playbook 🔄 PENDING
-**Goal:** Document viable trades
-**Deliverables:**
-- [ ] Entry/exit criteria
-- [ ] Position sizing framework
-- [ ] Settlement timeline tracking
-- [ ] Risk management rules
+### Phase 2: Live Trading Test 🔄 PENDING
+**Goal:** Execute 5 live trades with fixed infrastructure
+**Success Criteria:**
+- [ ] Entry within 30s of resolution confirmation
+- [ ] Position settles at $1.00
+- [ ] Net profit > $0 after fees
 
-**Assigned to:** Counterweight (Kimi) - review before execution
+**Assigned to:** Market-Maker (Kimi)
 
----
+### Phase 3: Scale or Pivot Decision 🔄 PENDING
+**Goal:** Prove edge with real money or document failure
+**Decision Criteria:**
+- If 3+ of 5 live trades profitable → Scale to 20+ trades/day
+- If <3 profitable → Document lessons, kill approach
 
-## 🎯 CURRENT OPPORTUNITIES (From Manual Scan)
-
-| Market Type | Polymarket Count | Potential Counterpart | Priority |
-|-------------|-----------------|----------------------|----------|
-| Trump/Politics | 12 markets | Kalshi | HIGH |
-| Sports (NBA/NHL/World Cup) | 47 markets | Betfair, Sportsbooks | MEDIUM |
-| BTC/Crypto | 4 markets | Crypto options | LOW |
-
-**Top Pick:** Trump deportation markets — crypto-native vs retail US audience = max price divergence potential
+**Assigned to:** Counterweight (Kimi) - final review
 
 ---
 
-## 📊 LEGACY STATUS (Speed-Based Arb)
+## 🎯 VALIDATED DATA (From arb-results.md)
+
+| Metric | Value |
+|--------|-------|
+| Paper trades | 15 |
+| Paper win rate | 100% |
+| Theoretical P/L | $105.30 |
+| Live trades attempted | 3 |
+| Live trades successful | 0 |
+| Avg detection time | <10s post-resolution |
+| Avg window duration | 5-15 min |
+
+**Problem:** Detection works, execution fails
+
+---
+
+## ❌ CROSS-MARKET ARBITRAGE — KILLED
+
+**Status:** ABANDONED after 3 failed discovery attempts
+**Finding:** Zero overlapping markets between Polymarket and Kalshi/Betfair
+**Evidence:**
+- Trump deportation markets: Do not exist on Polymarket
+- Sports championships: Not currently active
+- Tool limitations: Cannot access external markets
+
+**Lesson:** Don't build infrastructure for hypothetical opportunities
+
+---
+
+## 📊 SPEED-BASED ARB STATUS
 
 | Component | Status | Notes |
 |-----------|--------|-------|
-| 5m/15m Auto-arb | ❌ ABANDONED | Markets too efficient |
-| WebSocket bot | ✅ WORKING | But no spread found |
-| CLOB Wallet | ✅ READY | $5 USDC + 100 POL |
+| Detection system | ✅ WORKING | <10s confirmation via Chainlink |
+| Paper logging | ✅ WORKING | 15 trades, 100% accuracy |
+| Execution (Bankr) | ❌ BROKEN | 60-120s latency kills edge |
+| CLOB API | ⏳ PENDING | Application submitted |
+| Browser automation | ⚠️ FLAKY | Playwright timing issues |
 
 **Lessons Learned:**
-- Speed-based arb requires sub-millisecond latency
-- Competing with MMs and co-located bots
-- Cross-market is the viable edge
+- Speed-based arb works on paper
+- Execution infrastructure is the bottleneck
+- Don't pivot away from proven strategies due to tooling issues
 
 ---
 
