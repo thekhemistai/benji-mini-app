@@ -246,16 +246,46 @@ class KhemCLOBTrader:
             "type": "function"
         }]
         
-        w3 = Web3(Web3.HTTPProvider("https://polygon-rpc.com"))
+        # Use public RPC with fallback options
+        rpc_urls = [
+            os.getenv("POLYGON_RPC_URL"),
+            "https://polygon-rpc.com",
+            "https://rpc-mainnet.matic.network",
+            "https://matic-mainnet.chainstacklabs.com"
+        ]
+        
+        w3 = None
+        for url in rpc_urls:
+            if not url:
+                continue
+            try:
+                test_w3 = Web3(Web3.HTTPProvider(url))
+                if test_w3.is_connected():
+                    w3 = test_w3
+                    break
+            except:
+                continue
+        
+        if not w3:
+            # Fall back to first URL even if not connected - will fail gracefully later
+            w3 = Web3(Web3.HTTPProvider("https://polygon-rpc.com"))
         contract = w3.eth.contract(address=usdc_address, abi=abi)
         
         address = self.get_wallet_address()
-        balance = contract.functions.balanceOf(address).call()
         
-        return {
-            "usdc": balance / 1e6,  # USDC has 6 decimals
-            "address": address
-        }
+        try:
+            balance = contract.functions.balanceOf(address).call()
+            return {
+                "usdc": balance / 1e6,  # USDC has 6 decimals
+                "address": address
+            }
+        except Exception as e:
+            # RPC failed, return 0 but still provide address
+            return {
+                "usdc": 0.0,
+                "address": address,
+                "error": str(e)
+            }
 
 
 # Test function

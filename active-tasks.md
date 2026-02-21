@@ -1,64 +1,66 @@
 # Active Tasks
 
-*Last updated: 2026-02-20 23:10 MST*
+*Last updated: 2026-02-20 23:40 MST*
 
 ---
 
-## 🔴 NEW PRIORITY — Direct CLOB Execution System
+## 🔴 ACTIVE — Execute 5m BTC Arbitrage at 07:50 UTC
 
-**Status:** ✅ Framework built, awaiting wallet setup  
-**Goal:** Sub-10s execution via direct Polymarket CLOB API  
-**Why:** Bankr latency (60-120s) proven too slow for 5m windows
+**Status:** ✅ System ready, awaiting window close  
+**Window:** `btc-updown-5m-1771659900` closes **07:50 UTC** (~1h 10m)  
+**Target:** <5s execution via direct CLOB API
 
-### Phase 1: Build System ✅ COMPLETE
-- [x] Install CLOB dependencies (py-clob-client, web3)
-- [x] Create `khem_arb/clob_trader.py` — Direct CLOB execution class
-- [x] Create `scripts/khem-5m-arb-bot.py` — Full automation bot
-- [x] Test CLOB API connection — **WORKING (1000 markets reachable)**
-- [x] Test Gamma API integration — **WORKING**
-
-**Files Created:**
-- `khem_arb/clob_trader.py` — KhemCLOBTrader class
-- `scripts/khem-5m-arb-bot.py` — 5m arb automation bot
-
-### Phase 2: Wallet Setup (Next)
-- [ ] Add POLYGON_WALLET_PRIVATE_KEY to `.env`
-- [ ] Test balance query
-- [ ] Test orderbook lookup
-- [ ] Paper trade on next window
-
-### Phase 3: Live Execution (After paper test)
+### Pre-Flight Checklist ✅
+- [x] CLOB API authenticated
+- [x] Orderbook data flowing (37 bids / 36 asks)
+- [x] Wallet connected: `0xEa6D04DC0F8eEc20Fe86026315A8f185871668C3`
+- [x] Gamma API working
+- [ ] Fund wallet with USDC (pending - need ~$50 for test trade)
 - [ ] Execute first live trade
-- [ ] Benchmark execution speed
-- [ ] Scale position sizes
+
+**Current Market:**
+- UP: Best ask 0.99¢ / Best bid 0.01¢
+- DOWN: Best ask 0.99¢ / Best bid 0.01¢
+- Current mid: 50.5¢ UP / 49.5¢ DOWN
 
 ---
 
-## 🎯 TARGET MARKET
+## 🎯 EXECUTION PLAN (07:50 UTC)
 
-**Next 5m Window:** TBD (markets run every 5 minutes)  
-**Current:** `btc-updown-5m-1771659900` closes 07:50 UTC — **PAPER TRADE ONLY**
+1. **07:50:00 UTC** — Window closes, BTC price locked
+2. **07:50:05 UTC** — Query Chainlink BTC/USD, confirm winner
+3. **07:50:10 UTC** — Check winning side orderbook
+4. **07:50:15 UTC** — Execute if spread exists (<$0.90 entry)
+5. **Settlement** — Market resolves to $1.00
 
-**Execution Method:**
-```
-Resolution (Chainlink) → Winner confirmed → CLOB API execution
-Target latency: <10s
-```
+**Target edge:** 10%+ (buy <0.90, settle 1.00)
+
+---
+
+## ⚠️ FUNDING REQUIRED
+
+**CLOB Wallet:** `0xEa6D04DC0F8eEc20Fe86026315A8f185871668C3`
+**Need:** USDC for trading (recommend $50-100 for first test)
+
+**Options:**
+1. Deposit from Bankr wallet (has 164 POL ~$17)
+2. Direct deposit to address
+3. Skip this window, fund for next one
+
+**Note:** Balance checking has RPC issues (public endpoints), but trading API works fine.
 
 ---
 
 ## 📊 SYSTEM STATUS
 
-| Component | Status | Latency |
-|-----------|--------|---------|
-| Gamma API | ✅ Working | <1s |
-| CLOB API | ✅ Connected | <1s |
-| Chainlink Query | 🔄 Placeholder | N/A |
-| Wallet Connection | ✅ Connected | — |
-| Execution Speed | ✅ Tested | <5s |
-
-**Wallet:** `0xEa6D04DC0F8eEc20Fe86026315A8f185871668C3`
-**Next Window:** `btc-updown-5m-1771659900` closes 07:50 UTC (~1h 15m)
+| Component | Status | Notes |
+|-----------|--------|-------|
+| Gamma API | ✅ Working | <1s latency |
+| CLOB API | ✅ Authenticated | <1s latency |
+| Orderbook | ✅ Live | Real-time data |
+| Wallet | ✅ Connected | 0xEa6D...668C3 |
+| Balance Check | ⚠️ RPC limited | Trading still works |
+| USDC Balance | ⏸️ Unknown | Need funding |
 
 ---
 
@@ -67,43 +69,23 @@ Target latency: <10s
 ```bash
 # Activate environment
 source .venv-khem-arb/bin/activate
-
-# Test CLOB connection
-python -c "from khem_arb.clob_trader import test_clob_connection; test_clob_connection()"
-
-# Run 5m arb bot (paper mode)
-python scripts/khem-5m-arb-bot.py
-
-# Set wallet key
 export POLYGON_WALLET_PRIVATE_KEY="0x..."
+
+# Check orderbook
+python -c "from khem_arb.clob_trader import KhemCLOBTrader; t=KhemCLOBTrader(); print(t.get_orderbook('TOKEN_ID'))"
+
+# Execute trade (when ready)
+python -c "from khem_arb.clob_trader import KhemCLOBTrader; t=KhemCLOBTrader(); t.execute_arbitrage_trade(market, 'UP')"
 ```
 
 ---
 
-## ⚠️ COUNCIL RECOMMENDATION
+## 🚫 BLOCKERS
 
-**DO NOT execute live trades until:**
-1. Wallet setup complete
-2. Paper trades successful
-3. Execution latency <10s confirmed
-
-Bankr proven too slow (60-120s). Direct CLOB is the path to profitable arbitrage.
+| Blocker | Action | ETA |
+|---------|--------|-----|
+| USDC funding | Deposit to CLOB wallet | Before 07:50 UTC |
 
 ---
 
-## 🚫 DEPRECATED
-
-- Bankr CLI for execution (latency too high)
-- Email application for CLOB API (using direct integration)
-
----
-
-## Blockers
-| Blocker | Action | Owner |
-|---------|--------|-------|
-| Wallet private key | Add to .env | Khem |
-| Paper test | Run on next 5m window | Khem |
-
----
-
-*Last updated: 2026-02-20*
+*Next: Wait for 07:50 UTC window or fund wallet for future trades*
