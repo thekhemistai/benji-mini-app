@@ -20,18 +20,22 @@
 | Metric | Value |
 |--------|-------|
 | Total paper trades | 15 |
-| **LIVE trades** | **2** |
+| Paper trades today (Feb 20) | 12 |
+| **LIVE trades attempted** | **3** |
+| LIVE trades successful | 0 |
 | Correct resolutions | 6 |
 | Incorrect resolutions | 0 |
 | Pending resolutions | 1 |
 | Invalid trades (pre-resolution) | 1 |
 | Confirmation failures caught | 0 |
-| Average edge captured | 84.6% |
-| Average detection time | <30s post-resolution |
+| Average edge captured | 84.6% (overall), 98.2% (today) |
+| Average detection time | <10s post-resolution |
 | Average window duration | 5-15 min |
-| Theoretical P/L (realized) | $46.50 |
-| **Live P/L** | **TBD** |
-| Win rate | 100% (realized) |
+| Theoretical P/L (total) | $105.30 |
+| Theoretical P/L (today) | $58.80 |
+| **Live P/L** | **$0** (no successful executions) |
+| Win rate (paper) | 100% |
+| Execution success rate | 0% (system issues) |
 
 ---
 
@@ -135,6 +139,38 @@ Markets where confirmation protocol prevented a trade:
 **Log Files Created:**
 - `memory/trading/logs/watchlist-check-2026-02-19-2307.md`
 - `memory/trading/logs/watchlist-check-2026-02-19-2307.json`
+
+---
+
+### 2026-02-20 — Day 2 Summary
+
+**Trading Activity:**
+- **Paper trades logged:** 12 (trades #4-15)
+- **Live trade attempts:** 3 (all failed or wrong markets)
+- **Win rate (paper):** 100% (all logged correctly post-resolution)
+- **Avg edge captured:** 98.2% (most at 100-102%)
+- **Theoretical P/L today:** $58.80 (12 trades × $4.90 avg)
+- **Actual trades executed:** 0 (system issues)
+
+**Key Events:**
+| Time | Event | Result |
+|------|-------|--------|
+| 11:44 AM | Live trade #1 attempted | ❌ Wrong market (future window) |
+| 12:35 PM | Live trade #2 attempted | ❌ Wrong market (future window) |
+| 5:00 AM UTC | Hourly arb test | ⚠️ Bankr timeout, execution failed |
+| 9:30 PM | Daily market scan | ⏳ Monitoring for tomorrow |
+
+**System Status:**
+- ✅ Detection: <10 seconds post-resolution
+- ❌ Execution: Bankr CLI 60-120s (too slow)
+- ❌ Market targeting: Buys wrong windows
+- 🔄 Next: CLOB API application or browser fix
+
+**Lessons Learned:**
+1. Bankr CLI cannot specify exact timestamps (buys future windows)
+2. 60-120s execution time misses arbitrage window
+3. Need CLOB API or fixed browser automation
+4. Paper logging system works perfectly
 
 ---
 
