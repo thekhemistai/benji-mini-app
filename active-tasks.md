@@ -1,90 +1,106 @@
 # Active Tasks
 
-*Last updated: 2026-02-20 22:40 MST*
+*Last updated: 2026-02-20 23:10 MST*
 
 ---
 
-## 🔴 NEW PRIORITY — Polymarket Official Agents Integration
+## 🔴 NEW PRIORITY — Direct CLOB Execution System
 
-**Status:** ✅ Environment ready, Gamma API client tested  
-**Goal:** Get live trading working via official Python framework  
-**Why:** Native API access without waiting 3-14 days for CLOB approval
+**Status:** ✅ Framework built, awaiting wallet setup  
+**Goal:** Sub-10s execution via direct Polymarket CLOB API  
+**Why:** Bankr latency (60-120s) proven too slow for 5m windows
 
-### Phase 1: Environment Setup ✅ COMPLETE
-- [x] Clone polymarket/agents repo
-- [x] Extract useful components, document anti-patterns
-- [x] Create `khem_arb/` lightweight toolkit
-- [x] Set up Python 3.9 virtual environment (.venv-khem-arb)
-- [x] Install dependencies (httpx, pydantic, python-dotenv)
-- [x] Test Gamma API client — **WORKING**
+### Phase 1: Build System ✅ COMPLETE
+- [x] Install CLOB dependencies (py-clob-client, web3)
+- [x] Create `khem_arb/clob_trader.py` — Direct CLOB execution class
+- [x] Create `scripts/khem-5m-arb-bot.py` — Full automation bot
+- [x] Test CLOB API connection — **WORKING (1000 markets reachable)**
+- [x] Test Gamma API integration — **WORKING**
 
-**Test Results:**
-- GammaArbClient initialized successfully
-- Market by slug lookup: ✅ Working (tested btc-updown-15m-1771564500)
-- Active markets query: ✅ Working (199 markets retrieved)
-- Pydantic parsing: ✅ Working (type-safe market objects)
+**Files Created:**
+- `khem_arb/clob_trader.py` — KhemCLOBTrader class
+- `scripts/khem-5m-arb-bot.py` — 5m arb automation bot
 
-### Phase 2: Find Active Trading Windows (Next)
-- [ ] Identify upcoming BTC up/down markets (current time: 05:40 UTC)
-- [ ] Verify CLOB token IDs are accessible
-- [ ] Test orderbook lookup via CLOB client
-- [ ] Configure wallet connection
+### Phase 2: Wallet Setup (Next)
+- [ ] Add POLYGON_WALLET_PRIVATE_KEY to `.env`
+- [ ] Test balance query
+- [ ] Test orderbook lookup
+- [ ] Paper trade on next window
 
-**Note:** Current UTC time (05:40) is off-hours for BTC up/down markets. Markets typically active during US trading hours. Next windows likely in ~6-8 hours.
-
-### Phase 3: Live Trade Test (When markets active)
-- [ ] Execute first test trade (small amount, manual approval)
+### Phase 3: Live Execution (After paper test)
+- [ ] Execute first live trade
 - [ ] Benchmark execution speed
-- [ ] Log results
-
-**Files:**
-- `khem_arb/polymarket.py` — Gamma client
-- `polymarket-agents-official/` — Full reference repo
-- [[memory/research/polymarket-official-agents-extraction.md|Extraction Report]]
+- [ ] Scale position sizes
 
 ---
 
-## 🚫 CANCELLED — CLOB API Email Application
+## 🎯 TARGET MARKET
 
-**Reason:** Official agents framework provides same capability without 3-14 day wait  
-**Action:** Using direct Python integration instead
+**Next 5m Window:** TBD (markets run every 5 minutes)  
+**Current:** `btc-updown-5m-1771659900` closes 07:50 UTC — **PAPER TRADE ONLY**
 
----
-
-## 🔴 Priority 1b — Polymarket Arbitrage System
-**Current:** 17 trades logged, 84.6% avg edge, $46.50 theoretical P/L  
-**Target:** 25 trades for statistical significance
-
-**Blocked on:** Finding active BTC up/down markets (off-hours currently)
+**Execution Method:**
+```
+Resolution (Chainlink) → Winner confirmed → CLOB API execution
+Target latency: <10s
+```
 
 ---
 
-## 🟠 Priority 2 — Uptime Monitor MVP
-**Status:** On hold until arb system live
+## 📊 SYSTEM STATUS
+
+| Component | Status | Latency |
+|-----------|--------|---------|
+| Gamma API | ✅ Working | <1s |
+| CLOB API | ✅ Connected | <1s |
+| Chainlink Query | 🔄 Placeholder | N/A |
+| Wallet Connection | ⏸️ Awaiting key | — |
+| Execution Speed | ⏸️ Untested | Target <5s |
+
+---
+
+## 🔧 Quick Commands
+
+```bash
+# Activate environment
+source .venv-khem-arb/bin/activate
+
+# Test CLOB connection
+python -c "from khem_arb.clob_trader import test_clob_connection; test_clob_connection()"
+
+# Run 5m arb bot (paper mode)
+python scripts/khem-5m-arb-bot.py
+
+# Set wallet key
+export POLYGON_WALLET_PRIVATE_KEY="0x..."
+```
+
+---
+
+## ⚠️ COUNCIL RECOMMENDATION
+
+**DO NOT execute live trades until:**
+1. Wallet setup complete
+2. Paper trades successful
+3. Execution latency <10s confirmed
+
+Bankr proven too slow (60-120s). Direct CLOB is the path to profitable arbitrage.
+
+---
+
+## 🚫 DEPRECATED
+
+- Bankr CLI for execution (latency too high)
+- Email application for CLOB API (using direct integration)
 
 ---
 
 ## Blockers
 | Blocker | Action | Owner |
 |---------|--------|-------|
-| Market hours | Wait for US trading hours (06:00-14:00 MST) | Time |
-| Wallet setup | Add POLYGON_WALLET_PRIVATE_KEY to .env | Khem |
+| Wallet private key | Add to .env | Khem |
+| Paper test | Run on next 5m window | Khem |
 
 ---
-
-## Success Metric
-First programmatic trade executed via official framework
-
----
-
-## Quick Commands
-
-```bash
-# Activate environment
-source .venv-khem-arb/bin/activate
-
-# Test Gamma client
-python -c "from khem_arb.polymarket import GammaArbClient; c = GammaArbClient(); print('✅ Ready')"
-```
 
 *Last updated: 2026-02-20*
