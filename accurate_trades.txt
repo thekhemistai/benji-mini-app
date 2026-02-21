@@ -1,0 +1,7 @@
+
+2026-02-21 05:00:00 UTC
+Window: Hourly BTC
+Start: $67,693
+End: $67,803
+Winner: UP
+Command: npx bankr "buy 5 dollars of UP on bitcoin up or down hourly"

@@ -10,3 +10,17 @@ Trade Log - 2026-02-20 12:36
 - End Price: $67765
 - Winner: UP
 - Change: $174.00
+
+Trade Attempt - 2026-02-20 13:07
+- Start: $67632
+- End: $67684
+- Winner: UP
+- Change: $52.00
+- Bankr Result: Error: Command 'npx bankr "buy 5 dollars of up on BTC updown 5m"' timed out after 60 seconds...
+
+Trade - 2026-02-20 15:37
+- Winner: UP
+- Change: $98.00
+- Exec Time: 30.0s
+- Timeout: True
+- Success: False
