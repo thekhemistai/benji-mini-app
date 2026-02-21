@@ -10,7 +10,12 @@
 The `/markets` endpoint returns **archived historical data** (2020-2023).  
 The `/events` endpoint returns **live current markets** (2026, today's games).
 
-**Always use `/events` for live market data.**
+**CRITICAL FILTER:** To get live data, you MUST use:  
+```
+GET /events?active=true&closed=false&limit=500
+```
+
+Without `closed=false`, the API returns stale/archived events even with `active=true`.
 
 ---
 
