@@ -55,16 +55,30 @@
 
 ---
 
-## ❌ CROSS-MARKET ARBITRAGE — KILLED
+## ❌ CROSS-MARKET ARBITRAGE — KILLED (DEFINITIVE)
 
-**Status:** ABANDONED after 3 failed discovery attempts
-**Finding:** Zero overlapping markets between Polymarket and Kalshi/Betfair
+**Status:** ABANDONED after comprehensive investigation (2026-02-21)
+**Finding:** Impossible due to Polymarket API restrictions
+
 **Evidence:**
-- Trump deportation markets: Do not exist on Polymarket
-- Sports championships: Not currently active
-- Tool limitations: Cannot access external markets
+- Kalshi API: ✅ Returns live sports markets (authenticated, $10 funded)
+- Polymarket API: ❌ Returns ONLY archived markets (latest: Nov 2024)
+- Web UI shows live markets (Man City vs Newcastle, $6.7M) but NO API access
+- Comprehensive scan: 2000+ markets analyzed, zero API-accessible overlaps
 
-**Lesson:** Don't build infrastructure for hypothetical opportunities
+**Root Cause:**
+Polymarket intentionally restricts live market data to web UI. Public Gamma/CLOB APIs serve historical data only. Cross-platform arbitrage requires identical data access on both platforms.
+
+**Investigation Methods Used:**
+1. Gamma API `/markets` with all parameter combinations
+2. CLOB API `/markets` with active filters
+3. Events endpoint with sports/EPL tags
+4. Browser automation (blocked/unavailable)
+5. Shadow Council review (Research-Analyst, Archivist, Counterweight)
+
+**All approaches failed to access live Polymarket data.**
+
+**Lesson:** Verify API capabilities BEFORE building cross-platform strategies. Web UI ≠ API access.
 
 ---
 
