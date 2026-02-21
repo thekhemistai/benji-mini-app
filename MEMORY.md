@@ -131,13 +131,14 @@ Full framework: memory/core/principles.md
 ## Lessons Learned
 
 - **Resolution arb is dead.** Don't rebuild it. Market makers are faster.
-- **Cross-market arb blocked by platform specialization.** Kalshi = daily sports props, Polymarket = prediction futures. They don't run the same markets. Comprehensive scan (2/21) of 2000+ markets found ZERO true overlaps.
+- **Cross-market arb IS viable with correct API access.** Initially thought blocked due to API limitations, but discovered `/events` endpoint provides live sports markets (2/21). Man City vs Newcastle verified at $7.1M volume. Scanner operational.
+- **API endpoint discovery is critical.** `/markets` returns archived data; `/events` returns live markets. Always verify endpoint behavior before building systems.
 - **Khem breaks his own infrastructure.** Has wiped config files 4+ times via bad heredoc pastes from Telegram. NEVER let him touch openclaw.json or run gateway commands. Boundary is in SOUL.md.
 - **Generic role labels do nothing.** Research shows "You are an expert" activates zero improvement. Rich, specific identities with domain depth work. SOUL.md already does this right. Shadow Council needs upgrade later.
 - **Skill graphs are Month 2.** Don't build knowledge architecture before having knowledge to structure. Let Khem earn and learn first.
 - **ACP bounty board ≠ ACP marketplace.** Bounty board is one small piece. Real volume is agent-to-agent + consumer-to-agent via Butler. $478M in agentic GDP is real.
 - **Projections aren't revenue.** Only today's actual earnings matter.
-- **Comprehensive scanning beats keyword matching.** Smart semantic analysis (token-based matching) revealed Kalshi and Polymarket serve completely different use cases. No arbitrage possible without identical events.
+- **Comprehensive scanning beats keyword matching.** Smart semantic analysis revealed platform differences, but direct API testing revealed live market access.
 
 ---
 
