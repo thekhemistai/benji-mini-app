@@ -1,80 +1,90 @@
 # Active Tasks
 
-*Last updated: 2026-02-20 07:30 MST*
-
-## 🔴 TODAY — Execution Speed Fix
-
-### 1. Send CLOB API Application (30 min)
-- [ ] Send email to hello@polymarket.com — [[memory/trading/clob-api-application-email.md|Draft ready]]
-- [ ] Join Discord: https://discord.gg/Polymarket
-- [ ] Document send time, expected response: 3-14 days
-
-### 2. Browser Bridge Live Test ✅ COMPLETE
-- [x] Speed benchmark: Chrome 4.11s vs Brave 6.06s → Using Chrome
-- [x] Pre-position test: 0.77s page load once browser is open
-- [x] **Key finding: Pre-position = <1s execution (vs 42-51s manual)**
-- [ ] Next: Test full trade execution on live window with pre-positioning
-
-### 3. Trade Target (Ongoing)
-- [x] **FIRST LIVE TRADE EXECUTED** ✅ (2026-02-20 11:44 AM)
-- [x] **SECOND LIVE TRADE EXECUTED** ✅ (2026-02-20 12:35 PM)
-- [ ] Log 3 more trades today (current: 17 total, target: 25)
-- [ ] Focus: 5-min BTC windows with automated execution
-- [ ] Track: Live P/L vs theoretical
+*Last updated: 2026-02-20 22:40 MST*
 
 ---
 
-## 🔴 Priority 1 — Polymarket Execution Optimization
-**Goal:** Sub-30s execution from resolution → fill
+## 🔴 NEW PRIORITY — Polymarket Official Agents Integration
 
-**Phase 1: Contract Research** ✅ COMPLETE
-**Phase 2: Bankr CLI Testing** 🔄 ON HOLD (prioritizing API + browser)
-**Phase 3: CLOB API Application** 🔄 ACTIVE — Send today
-**Phase 4: Browser Bridge** 🔄 Ready to test
+**Status:** ✅ Environment ready, Gamma API client tested  
+**Goal:** Get live trading working via official Python framework  
+**Why:** Native API access without waiting 3-14 days for CLOB approval
 
-**Success Metric:** <30s execution consistently
+### Phase 1: Environment Setup ✅ COMPLETE
+- [x] Clone polymarket/agents repo
+- [x] Extract useful components, document anti-patterns
+- [x] Create `khem_arb/` lightweight toolkit
+- [x] Set up Python 3.9 virtual environment (.venv-khem-arb)
+- [x] Install dependencies (httpx, pydantic, python-dotenv)
+- [x] Test Gamma API client — **WORKING**
+
+**Test Results:**
+- GammaArbClient initialized successfully
+- Market by slug lookup: ✅ Working (tested btc-updown-15m-1771564500)
+- Active markets query: ✅ Working (199 markets retrieved)
+- Pydantic parsing: ✅ Working (type-safe market objects)
+
+### Phase 2: Find Active Trading Windows (Next)
+- [ ] Identify upcoming BTC up/down markets (current time: 05:40 UTC)
+- [ ] Verify CLOB token IDs are accessible
+- [ ] Test orderbook lookup via CLOB client
+- [ ] Configure wallet connection
+
+**Note:** Current UTC time (05:40) is off-hours for BTC up/down markets. Markets typically active during US trading hours. Next windows likely in ~6-8 hours.
+
+### Phase 3: Live Trade Test (When markets active)
+- [ ] Execute first test trade (small amount, manual approval)
+- [ ] Benchmark execution speed
+- [ ] Log results
+
+**Files:**
+- `khem_arb/polymarket.py` — Gamma client
+- `polymarket-agents-official/` — Full reference repo
+- [[memory/research/polymarket-official-agents-extraction.md|Extraction Report]]
+
+---
+
+## 🚫 CANCELLED — CLOB API Email Application
+
+**Reason:** Official agents framework provides same capability without 3-14 day wait  
+**Action:** Using direct Python integration instead
 
 ---
 
 ## 🔴 Priority 1b — Polymarket Arbitrage System
-**Current:** 15 trades, 84.6% avg edge, $46.50 theoretical P/L
+**Current:** 17 trades logged, 84.6% avg edge, $46.50 theoretical P/L  
 **Target:** 25 trades for statistical significance
 
-**Daily Routine:**
-- Monitor BTC 5m/15m windows
-- Log all paper trades immediately
-- Track: detection time, entry price, window duration
+**Blocked on:** Finding active BTC up/down markets (off-hours currently)
 
 ---
 
-## 🟠 Priority 2 — Uptime Monitor MVP (Starts after 25 trades logged)
-**Goal:** Launch agent health monitoring service
-**Trigger:** Complete arb system first — don't split focus
+## 🟠 Priority 2 — Uptime Monitor MVP
+**Status:** On hold until arb system live
 
 ---
 
-## 🧊 Blockers
+## Blockers
 | Blocker | Action | Owner |
 |---------|--------|-------|
-| Gateway restart | Verify browser automation works | Khem |
-| CLOB API send | Email hello@polymarket.com | Khem (pending approval) |
-| Rate limits on subagents | Reduce Counterweight cadence | Khem |
+| Market hours | Wait for US trading hours (06:00-14:00 MST) | Time |
+| Wallet setup | Add POLYGON_WALLET_PRIVATE_KEY to .env | Khem |
 
 ---
 
-## Daily Execution Rhythm
-| Time (MST) | Action |
-|------------|--------|
-| Every 5 min | Check BTC window status (during hours) |
-| 6:00 AM | Daily summary, plan today's windows |
-| 10:00 PM | Log day's trades, update results file |
-| Every 4 hrs | Counterweight check-in (reduced from 2 hrs) |
+## Success Metric
+First programmatic trade executed via official framework
 
 ---
 
-## Automation (Cron Jobs)
-See `crontab -l` for active jobs:
-- `7c525f14-278b-4f7f-b2ef-6f17e195562c` — Market monitor (every 30 min)
-- Counterweight — Every 4 hours (NEW: reduced frequency)
+## Quick Commands
+
+```bash
+# Activate environment
+source .venv-khem-arb/bin/activate
+
+# Test Gamma client
+python -c "from khem_arb.polymarket import GammaArbClient; c = GammaArbClient(); print('✅ Ready')"
+```
 
 *Last updated: 2026-02-20*
