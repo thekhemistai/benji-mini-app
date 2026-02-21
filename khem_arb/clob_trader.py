@@ -77,9 +77,16 @@ class KhemCLOBTrader:
         """Get orderbook for a token."""
         return self.client.get_order_book(token_id)
     
-    def get_price(self, token_id: str) -> float:
-        """Get current mid price for a token."""
-        return float(self.client.get_price(token_id))
+    def get_price(self, token_id: str, side: str = "BUY") -> float:
+        """Get current price for a token.
+        
+        Args:
+            token_id: CLOB token ID
+            side: "BUY" for bid price, "SELL" for ask price
+        """
+        from py_clob_client.constants import BUY, SELL
+        side_flag = BUY if side == "BUY" else SELL
+        return float(self.client.get_price(token_id, side_flag))
     
     def execute_limit_order(
         self,

@@ -54,8 +54,11 @@ Target latency: <10s
 | Gamma API | ✅ Working | <1s |
 | CLOB API | ✅ Connected | <1s |
 | Chainlink Query | 🔄 Placeholder | N/A |
-| Wallet Connection | ⏸️ Awaiting key | — |
-| Execution Speed | ⏸️ Untested | Target <5s |
+| Wallet Connection | ✅ Connected | — |
+| Execution Speed | ✅ Tested | <5s |
+
+**Wallet:** `0xEa6D04DC0F8eEc20Fe86026315A8f185871668C3`
+**Next Window:** `btc-updown-5m-1771659900` closes 07:50 UTC (~1h 15m)
 
 ---
 
