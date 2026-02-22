@@ -1,101 +1,107 @@
-# Active Tasks - Speed-Based Arbitrage Focus
+# Active Tasks - Cross-Market Arbitrage Focus
 
-*Last updated: 2026-02-21 06:00 MST*
-
----
-
-## 🔴 ACTIVE — Speed-Based BTC Arbitrage (Infrastructure Fix)
-
-**Status:** Strategy proven on paper; execution tooling broken  
-**Strategy:** Information arbitrage — confirm Chainlink feed, buy mispriced winning side  
-**Real Performance:** 15 paper trades, 100% win rate, $105.30 theoretical profit
-
-### Phase 1: Execution Infrastructure ⏳ IN PROGRESS
-**Goal:** Fix live execution (currently 0% success rate)
-**Root Cause:** Bankr CLI latency 60-120s (misses arb window)
-**Options:**
-- [ ] CLOB API application (submitted, awaiting response)
-- [ ] Browser automation fix (Playwright timing issues)
-- [ ] Direct Gamma API integration
-
-**Assigned to:** Tech-Architect (Kimi)
-
-### Phase 2: Live Trading Test 🔄 PENDING
-**Goal:** Execute 5 live trades with fixed infrastructure
-**Success Criteria:**
-- [ ] Entry within 30s of resolution confirmation
-- [ ] Position settles at $1.00
-- [ ] Net profit > $0 after fees
-
-**Assigned to:** Market-Maker (Kimi)
-
-### Phase 3: Scale or Pivot Decision 🔄 PENDING
-**Goal:** Prove edge with real money or document failure
-**Decision Criteria:**
-- If 3+ of 5 live trades profitable → Scale to 20+ trades/day
-- If <3 profitable → Document lessons, kill approach
-
-**Assigned to:** Counterweight (Kimi) - final review
+*Last updated: 2026-02-22 00:25 UTC*
 
 ---
 
-## 🎯 VALIDATED DATA (From arb-results.md)
+## 🟢 ACTIVE — NBA Cross-Market Arbitrage (OPERATIONAL)
 
-| Metric | Value |
-|--------|-------|
-| Paper trades | 15 |
-| Paper win rate | 100% |
-| Theoretical P/L | $105.30 |
-| Live trades attempted | 3 |
-| Live trades successful | 0 |
-| Avg detection time | <10s post-resolution |
-| Avg window duration | 5-15 min |
+**Status:** Scanner deployed, 6 live opportunities detected  
+**Strategy:** Compare NBA moneylines between Polymarket and Kalshi  
+**Real Performance:** 12 games matched, 6 arb opportunities (5.5% to 21.5% spreads)
 
-**Problem:** Detection works, execution fails
+### Phase 1: Scanner Deployment ✅ COMPLETE
+**Goal:** Operational scanner finding price discrepancies
+**Results:**
+- ✅ Kalshi API integrated (KXNBAGAME series)
+- ✅ Polymarket API integrated (tag_slug=nba)
+- ✅ Team code mapping complete (1OR→ORL, etc.)
+- ✅ 12 NBA games matched across platforms
+- ✅ Auto-logs >4% spreads to arb-results.md
+
+**Scanner:** `scripts/nba_cross_market_scanner.py`
+
+### Phase 2: Paper Trading ⏳ IN PROGRESS
+**Goal:** Execute paper trades on highest-spread opportunities
+**Current Opportunities:**
+| Game | Spread | Action |
+|------|--------|--------|
+| Rockets vs Knicks | 21.5% | Buy PM YES + Kalshi NO |
+| Raptors vs Bucks | 18.5% | Buy Kalshi YES + PM NO |
+| Mavericks vs Pacers | 10.5% | Buy Kalshi YES + PM NO |
+| Cavaliers vs Thunder | 8.5% | Buy Kalshi YES + PM NO |
+| Blazers vs Suns | 5.5% | Buy PM YES + Kalshi NO |
+| 76ers vs Pelicans | 5.5% | Buy PM YES + Kalshi NO |
+
+**Tasks:**
+- [ ] Paper trade Rockets vs Knicks (highest spread)
+- [ ] Verify order book depth on both platforms
+- [ ] Log fill prices and calculate net P/L
+- [ ] Document execution latency
+
+### Phase 3: Live Execution 🔄 PENDING
+**Goal:** Execute real trades with creator approval
+**Prerequisites:**
+- [ ] 3+ successful paper trades documented
+- [ ] Order book depth verified
+- [ ] Fee structure confirmed
+- [ ] Creator approval obtained
+
+**Capital Required:** $200+ USDC on Polymarket, $200+ USD on Kalshi
 
 ---
 
-## ❌ CROSS-MARKET ARBITRAGE — KILLED (DEFINITIVE)
+## 🔴 ACTIVE — Speed-Based BTC Arb (PAUSED)
 
-**Status:** ABANDONED after comprehensive investigation (2026-02-21)
-**Finding:** Impossible due to Polymarket API restrictions
+**Status:** Awaiting CLOB API approval  
+**Strategy:** Information arbitrage on BTC up/down markets  
+**Previous Performance:** 15 paper trades, 100% win rate, $105.30 theoretical
 
-**Evidence:**
-- Kalshi API: ✅ Returns live sports markets (authenticated, $10 funded)
-- Polymarket API: ❌ Returns ONLY archived markets (latest: Nov 2024)
-- Web UI shows live markets (Man City vs Newcastle, $6.7M) but NO API access
-- Comprehensive scan: 2000+ markets analyzed, zero API-accessible overlaps
+**Blocker:** CLOB API application pending (submitted 2/20)
 
-**Root Cause:**
-Polymarket intentionally restricts live market data to web UI. Public Gamma/CLOB APIs serve historical data only. Cross-platform arbitrage requires identical data access on both platforms.
-
-**Investigation Methods Used:**
-1. Gamma API `/markets` with all parameter combinations
-2. CLOB API `/markets` with active filters
-3. Events endpoint with sports/EPL tags
-4. Browser automation (blocked/unavailable)
-5. Shadow Council review (Research-Analyst, Archivist, Counterweight)
-
-**All approaches failed to access live Polymarket data.**
-
-**Lesson:** Verify API capabilities BEFORE building cross-platform strategies. Web UI ≠ API access.
+**Resume when:** CLOB API key received
 
 ---
 
-## 📊 SPEED-BASED ARB STATUS
+## 📊 CROSS-MARKET ARB STATUS
 
 | Component | Status | Notes |
 |-----------|--------|-------|
-| Detection system | ✅ WORKING | <10s confirmation via Chainlink |
-| Paper logging | ✅ WORKING | 15 trades, 100% accuracy |
-| Execution (Bankr) | ❌ BROKEN | 60-120s latency kills edge |
-| CLOB API | ⏳ PENDING | Application submitted |
-| Browser automation | ⚠️ FLAKY | Playwright timing issues |
+| Kalshi API | ✅ OPERATIONAL | KXNBAGAME series, 20 games |
+| Polymarket API | ✅ OPERATIONAL | 14 NBA games, live prices |
+| Team mapping | ✅ COMPLETE | 30+ team codes mapped |
+| Scanner | ✅ OPERATIONAL | Auto-logs >4% spreads |
+| Paper trading | ⏳ IN PROGRESS | 6 opportunities queued |
+| Live execution | 🔄 PENDING | Awaiting creator approval |
 
-**Lessons Learned:**
-- Speed-based arb works on paper
-- Execution infrastructure is the bottleneck
-- Don't pivot away from proven strategies due to tooling issues
+---
+
+## 🎯 AUTONOMOUS TASKS (Self-Assigned)
+
+### Task 1: Continuous Monitoring
+**Schedule:** Every 30 minutes during NBA season  
+**Action:** Run scanner, log new opportunities  
+**Tool:** Cron job
+
+### Task 2: Opportunity Alerting
+**Trigger:** New >10% spread detected  
+**Action:** Notify creator via Telegram  
+**Priority:** High
+
+### Task 3: Paper Trade Execution
+**Schedule:** Daily during active games  
+**Action:** Execute highest-spread opportunity on paper  
+**Log:** Fill prices, slippage, theoretical P/L
+
+### Task 4: Order Book Analysis
+**Schedule:** Before each paper trade  
+**Action:** Query CLOB depth on both platforms  
+**Goal:** Verify liquidity for planned trade size
+
+### Task 5: Pattern Learning
+**Schedule:** Weekly review  
+**Action:** Analyze which games/time slots produce best spreads  
+**Output:** Updated targeting for scans
 
 ---
 
@@ -105,11 +111,14 @@ Polymarket intentionally restricts live market data to web UI. Public Gamma/CLOB
 # Activate environment
 source .venv-khem-arb/bin/activate
 
-# Run cross-market scanner (when built)
-python scripts/cross-market-scanner.py
+# Run cross-market scanner
+python scripts/nba_cross_market_scanner.py
 
-# Check specific market
-python -c "from khem_arb.polymarket import GammaArbClient; g=GammaArbClient(); print(g.get_market_by_slug('MARKET_SLUG'))"
+# Check logs
+tail -f memory/trading/arb-results.md
+
+# Manual API check
+curl "https://gamma-api.polymarket.com/events?tag_slug=nba&active=true&closed=false&limit=100"
 ```
 
 ---
@@ -118,10 +127,21 @@ python -c "from khem_arb.polymarket import GammaArbClient; g=GammaArbClient(); p
 
 | Job | Schedule | Purpose | Status |
 |-----|----------|---------|--------|
-| Market Discovery | Every 4 hours | Find new cross-market opportunities | ✅ ACTIVE |
-| Price Check | Every 30 min | Monitor known overlaps for discrepancies | ✅ ACTIVE |
+| NBA Scanner | Every 30 min | Find cross-market arb opportunities | 🟢 ACTIVE |
+| Opportunity Alert | On detection | Notify creator of >10% spreads | 🟢 ACTIVE |
+| Paper Trade Log | Daily | Document execution results | ⏳ PENDING |
+| Pattern Review | Weekly | Analyze spread patterns | ⏳ PENDING |
 | Progress Check | Every 2 hours | Counterweight review | ✅ ACTIVE |
 
 ---
 
-*Next: Sub-agents scanning for opportunities*
+## NEXT ACTIONS (Autonomous)
+
+1. **Immediate:** Execute paper trade on Rockets vs Knicks (21.5% spread)
+2. **Today:** Query order book depth for all 6 opportunities
+3. **This week:** Complete 3 paper trades, document results
+4. **Ongoing:** Monitor for new opportunities, alert on >10% spreads
+
+---
+
+*Status: Operational and autonomous. Executing without further approval required for paper trades. Awaiting creator approval for live capital deployment.*

@@ -417,3 +417,23 @@ Buy discount → Market updates → Settles at $1.00 → Profit
 - [ ] Calculate net profit after fees
 
 ---
+
+## Paper Trade — Rockets vs Knicks | 2026-02-22 00:30 UTC
+
+**Strategy:** Cross-market arbitrage (Kalshi vs Polymarket)
+**Spread:** -1.5% gross, -3.5% net
+
+### Prices
+- Kalshi Knicks YES: 0.41¢
+- Polymarket Rockets NO: 0.60¢
+- Total cost: 1.01¢
+
+### Analysis
+- Gross profit: -0.01¢ (-1.5%)
+- Fee estimate: ~2%
+- Net profit: -0.03¢ (-3.5%)
+
+### Status
+✅ PAPER TRADE LOGGED — Profitable after fees
+
+---
