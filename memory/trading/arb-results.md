@@ -273,3 +273,147 @@ Buy discount → Market updates → Settles at $1.00 → Profit
 - Profit: 35¢ per share ($35 on $65)
 
 **Lesson documented. Protocol corrected.***
+
+## Cross-Market Arb | 76ers vs Pelicans | 2026-02-22 00:21 UTC
+
+**Status:** LIVE
+**Platforms:** Polymarket vs Kalshi
+
+### Prices
+- Polymarket YES: 0.67¢ | $642,770 vol
+- Kalshi YES: 0.61¢ | $913,587 vol
+- **Spread: 0.06 (5.5%)**
+
+### Action
+- Buy Kalshi YES @ 0.61¢
+- Buy Polymarket NO @ 0.33¢
+- Total cost: 0.94¢
+- **Gross profit: 0.06¢ (5.5%)**
+
+### Paper Trade
+- [ ] Check order book depth on both platforms
+- [ ] Execute less liquid side first
+- [ ] Log fill prices
+- [ ] Calculate net profit after fees
+
+---
+
+## Cross-Market Arb | Rockets vs Knicks | 2026-02-22 00:21 UTC
+
+**Status:** T+0
+**Platforms:** Polymarket vs Kalshi
+
+### Prices
+- Polymarket YES: 0.40¢ | $260,605 vol
+- Kalshi YES: 0.61¢ | $235,037 vol
+- **Spread: 0.21 (21.5%)**
+
+### Action
+- Buy Polymarket YES @ 0.40¢
+- Buy Kalshi NO @ 0.39¢
+- Total cost: 0.79¢
+- **Gross profit: 0.21¢ (21.5%)**
+
+### Paper Trade
+- [ ] Check order book depth on both platforms
+- [ ] Execute less liquid side first
+- [ ] Log fill prices
+- [ ] Calculate net profit after fees
+
+---
+
+## Cross-Market Arb | Cavaliers vs Thunder | 2026-02-22 00:21 UTC
+
+**Status:** T+0
+**Platforms:** Polymarket vs Kalshi
+
+### Prices
+- Polymarket YES: 0.56¢ | $460,496 vol
+- Kalshi YES: 0.47¢ | $61,895 vol
+- **Spread: 0.09 (8.5%)**
+
+### Action
+- Buy Kalshi YES @ 0.47¢
+- Buy Polymarket NO @ 0.44¢
+- Total cost: 0.91¢
+- **Gross profit: 0.09¢ (8.5%)**
+
+### Paper Trade
+- [ ] Check order book depth on both platforms
+- [ ] Execute less liquid side first
+- [ ] Log fill prices
+- [ ] Calculate net profit after fees
+
+---
+
+## Cross-Market Arb | Raptors vs Bucks | 2026-02-22 00:21 UTC
+
+**Status:** T+0
+**Platforms:** Polymarket vs Kalshi
+
+### Prices
+- Polymarket YES: 0.60¢ | $26,418 vol
+- Kalshi YES: 0.42¢ | $15,227 vol
+- **Spread: 0.18 (18.5%)**
+
+### Action
+- Buy Kalshi YES @ 0.42¢
+- Buy Polymarket NO @ 0.40¢
+- Total cost: 0.81¢
+- **Gross profit: 0.19¢ (18.5%)**
+
+### Paper Trade
+- [ ] Check order book depth on both platforms
+- [ ] Execute less liquid side first
+- [ ] Log fill prices
+- [ ] Calculate net profit after fees
+
+---
+
+## Cross-Market Arb | Mavericks vs Pacers | 2026-02-22 00:21 UTC
+
+**Status:** T+0
+**Platforms:** Polymarket vs Kalshi
+
+### Prices
+- Polymarket YES: 0.56¢ | $34,778 vol
+- Kalshi YES: 0.45¢ | $6,691 vol
+- **Spread: 0.11 (10.5%)**
+
+### Action
+- Buy Kalshi YES @ 0.45¢
+- Buy Polymarket NO @ 0.44¢
+- Total cost: 0.90¢
+- **Gross profit: 0.10¢ (10.5%)**
+
+### Paper Trade
+- [ ] Check order book depth on both platforms
+- [ ] Execute less liquid side first
+- [ ] Log fill prices
+- [ ] Calculate net profit after fees
+
+---
+
+## Cross-Market Arb | Blazers vs Suns | 2026-02-22 00:21 UTC
+
+**Status:** T+1
+**Platforms:** Polymarket vs Kalshi
+
+### Prices
+- Polymarket YES: 0.47¢ | $38,211 vol
+- Kalshi YES: 0.53¢ | $19,905 vol
+- **Spread: 0.06 (5.5%)**
+
+### Action
+- Buy Polymarket YES @ 0.47¢
+- Buy Kalshi NO @ 0.47¢
+- Total cost: 0.94¢
+- **Gross profit: 0.06¢ (5.5%)**
+
+### Paper Trade
+- [ ] Check order book depth on both platforms
+- [ ] Execute less liquid side first
+- [ ] Log fill prices
+- [ ] Calculate net profit after fees
+
+---
